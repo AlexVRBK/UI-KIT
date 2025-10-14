@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Kit - Comment-01</title>
+
+  <link rel="stylesheet" href="../../css/elements/elements.css">
+  <link rel="stylesheet" href="../../css/elements/comments/comment-1.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="demo-page-layout">
+    <main class="demo-content-wrapper">
+      <div class="demo-container">
+
+        <header class="demo-header">
+          <a href="index.html" class="demo-back-link">← Назад к каталогу</a>
+          <h2>Демонстрация: Comment-01</h2>
+        </header>
+
+        <div class="seventh__container">
+                <div class="title border">
+                    <div class="bigger-title"><span>Відгуки</span></div>
+                </div><!-- FORM START -->
+                <form action="#" class="intlTelInput border" id="commentForm" method="post">
+                    <div class="form__item">
+                        <div class="file">
+                            <div class="file__item"><label class="form__avatar" for="formImage" id="formAvatar"></label>
+                                <input accept=".jpg, .png, .gif" class="file__input" id="formImage" name="image" type="file"> <label class="file-label" for="formImage">Завантажити</label></div>
+                        </div>
+                    </div>
+                    <div class="form__inputs"><input id="inputCommentName" placeholder="Ваше Ім'я" type="text" value="">
+                        <textarea cols="20" id="inputCommentText" name="" placeholder="Ваш коментар..." rows="5"></textarea>
+                        <button id="commentPush" type="submit">Опублікувати</button>
+                    </div>
+                </form>
+                <!-- FORM END -->
+                <div data-comments="" id="comments">
+                    <div id="commentPushBlock"></div>
+                    <div class="comment"><span class="text1 lt21">Лариса</span> <span class="text2"></span>
+                        <div class="text3"><img alt="img" src="img/ava1.webp">
+                            <div class="comment-wrapper">
+                                <div class="txtCom lt22">Роками страждала від болю в колінах. Жоден препарат не допомагав до кінця. Але після початку прийому Суглобол, я вперше за довгий час змогла вільно ходити без болю. Це справжнє диво!
+
+                                    <img src="img/_com1.webp" alt="">
+
+                                </div>
+                                <div class="comment-action">
+                                    <div class="comment-like"><a href="#"><img alt="like icon" src="../../img/elements/comments/comment-1/like.svg"></a></div>
+                                    <div class="comment-date">
+                                        <script type="text/javascript">d = new Date();
+                                        p = new Date(d.getTime() - 0 * 86400000);
+                                        monthA = '.01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                                        document.write(p.getDate() - 0 + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());</script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment"><span class="text1 lt21">Валентина Кривошапко</span> <span class="text2"></span>
+                        <div class="text3"><img alt="img" src="img/ava2.webp">
+                            <div class="comment-wrapper">
+                                <div class="txtCom lt22"><a href="#">Суглобол</a>
+                                    дійсно ефективний! Артрит мучив мене багато років, але після курсу я відчула значне покращення. Вже не боюся активних прогулянок з онуками)
+                                </div>
+
+                                <div class="comment-action">
+                                    <div class="comment-like"><a href="#"><img alt="like icon" src="../../img/elements/comments/comment-1/like.svg"></a></div>
+                                    <div class="comment-date">
+                                        <script type="text/javascript">d = new Date();
+                                        p = new Date(d.getTime() - 0 * 86400000);
+                                        monthA = '.01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                                        document.write(p.getDate() - 0 + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());</script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment"><span class="text1 lt21">Олег</span> <span class="text2"></span>
+                        <div class="text3"><img alt="img" src="img/ava3.webp">
+                            <div class="comment-wrapper">
+                                <div class="txtCom lt22">Скільки я не пробував різних засобів, біль у плечах не відступав. Але цей новий препарат зробив те, що інші не змогли. Рекомендую.
+                                    <img src="img/_com2.webp" alt="">
+                                </div>
+                                <div class="comment-action">
+                                    <div class="comment-like"><a href="#"><img alt="like icon" src="../../img/elements/comments/comment-1/like.svg"></a></div>
+                                    <div class="comment-date">
+                                        <script type="text/javascript">d = new Date();
+                                        p = new Date(d.getTime() - 1 * 86400000);
+                                        monthA = '.01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                                        document.write(p.getDate() - 0 + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());</script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment"><span class="text1 lt21">Вікторія Бабенко</span> <span class="text2"></span>
+                        <div class="text3"><img alt="img" src="img/ava4.webp">
+                            <div class="comment-wrapper">
+                                <div class="txtCom lt22">Я довго сумнівалася, чи варто спробувати щось нове, але цей препарат перевершив усі мої очікування! Після першого тижня прийому припухлість на руках почала спадати а головне – повністю зник біль, який мучив мене роками.
+                                </div>
+                                <div class="comment-action">
+                                    <div class="comment-like"><a href="#"><img alt="like icon" src="../../img/elements/comments/comment-1/like.svg"></a></div>
+                                    <div class="comment-date">
+                                        <script type="text/javascript">d = new Date();
+                                        p = new Date(d.getTime() - 1 * 86400000);
+                                        monthA = '.01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                                        document.write(p.getDate() - 0 + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());</script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment"><span class="text1 lt21">Галина Шевчук</span> <span class="text2"></span>
+                        <div class="text3"><img alt="img" src="img/ava5.webp">
+                            <div class="comment-wrapper">
+                                <div class="txtCom lt22">Велике дякую Фонду Петра Порошенка за все що робиться для людей! Сьогодні замовила препарат, але вже вірю в те, що він допоможе.
+
+                                </div>
+                                <div class="comment-action">
+                                    <div class="comment-like"><a href="#"><img alt="like icon" src="../../img/elements/comments/comment-1/like.svg"></a></div>
+                                    <div class="comment-date">
+                                        <script type="text/javascript">d = new Date();
+                                        p = new Date(d.getTime() - 1 * 86400000);
+                                        monthA = '.01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                                        document.write(p.getDate() - 0 + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());</script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment"><span class="text1 lt21">Максим Рудько</span> <span class="text2"></span>
+                        <div class="text3"><img alt="img" src="img/ava6.webp">
+                            <div class="comment-wrapper">
+                                <div class="txtCom lt22">Ніколи не залишаю відгуків, але про Суглобол не міг не сказати. Я завжди любив свою роботу. Я столяр.. Але з роками біль у руках став настільки сильним, що я почав сумніватися, чи зможу продовжувати. Лікарі розводили руками і мене реально накривав відчай. Аж поки я не почув про Суглобол. Для мене також важливим був натуральний склад, бо зараз усюди одна хімоза яка тільки вбиває. Десь через 2 тижні я зрозумів, що вперше за багато років не відчуваю тягнучого болю в руках. Я знову міг працювати. Не знаю як кому, але для мене це фантастика!!
+
+                                </div>
+                                <div class="comment-action">
+                                    <div class="comment-like"><a href="#"><img alt="like icon" src="../../img/elements/comments/comment-1/like.svg"></a></div>
+                                    <div class="comment-date">
+                                        <script type="text/javascript">d = new Date();
+                                        p = new Date(d.getTime() - 2 * 86400000);
+                                        monthA = '.01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                                        document.write(p.getDate() - 0 + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());</script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <span class="text1 lt21">Оксана Василенко</span>
+                        <span class="text2"></span>
+                        <div class="text3"><img alt="img" src="img/ava7.webp">
+                            <div class="comment-wrapper">
+                                <div class="txtCom lt22"> Суглобол вразив мене як фахівця своєю унікальною формулою, яка не має аналогів на ринку. Як лікар-ревматолог, я дуже задоволена результатами його застосування і впевнена, що він стане відмінним вибором для відновлення суглобів моїх пацієнтів.
+
+
+                                </div>
+                                <div class="comment-action">
+                                    <div class="comment-like">
+                                        <a href="#">
+                                            <img src="../../img/elements/comments/comment-1/like.svg" alt="like icon">
+                                        </a>
+                                    </div>
+                                    <div class="comment-date">
+                                        <script type="text/javascript">d = new Date();
+                                        p = new Date(d.getTime() - 2 * 86400000);
+                                        monthA = '.01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                                        document.write(p.getDate() - 0 + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());</script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <span class="text1 lt21">Валерій</span>
+                        <span class="text2"></span>
+                        <div class="text3"><img alt="img" src="img/ava8.webp">
+                            <div class="comment-wrapper">
+                                <div class="txtCom lt22">Купив Суглобол своєму батьку, бо через постійний біль в колінах йому було дуже важко ходити. Пройшов місяць і вже бігає як молодий – всі в приємному шоці!
+
+
+                                </div>
+                                <div class="comment-action">
+                                    <div class="comment-like">
+                                        <a href="#">
+                                            <img src="../../img/elements/comments/comment-1/like.svg" alt="like icon">
+                                        </a>
+                                    </div>
+                                    <div class="comment-date">
+                                        <script type="text/javascript">d = new Date();
+                                        p = new Date(d.getTime() - 2 * 86400000);
+                                        monthA = '.01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                                        document.write(p.getDate() - 0 + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());</script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <span class="text1 lt21">Ганна Миколаївна</span>
+                        <span class="text2"></span>
+                        <div class="text3"><img alt="img" src="img/ava9.webp">
+                            <div class="comment-wrapper">
+                                <div class="txtCom lt22">Я пенсіонерка і грошей не вистачає на дорогі препарати, які тільки й пропонують в аптеці.. Дякую ЄС за можливість повернутися до нормального життя не за всі гроші світу!
+
+                                </div>
+                                <div class="comment-action">
+                                    <div class="comment-like">
+                                        <a href="#">
+                                            <img src="../../img/elements/comments/comment-1/like.svg" alt="like icon">
+                                        </a>
+                                    </div>
+                                    <div class="comment-date">
+                                        <script type="text/javascript">d = new Date();
+                                        p = new Date(d.getTime() - 2 * 86400000);
+                                        monthA = '.01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                                        document.write(p.getDate() - 0 + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());</script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="title border" data-load-comment="">Завантажити ще...</button>
+            </div>
+
+            <script>
+              
+            </script>
+       
+
+        <section class="component-demo">
+          <h3>Code: 👇</h3>
+          <pre class="code-block">
+           &lt;!-- HTML --&gt; &lt;!вставить после тега &lt;body&gt;&gt;
+                                  
+          &lt;a href="#"&gt;
+    &lt;section class="custom-social-proof" style="display: none;"&gt;
+        &lt;div class="custom-notification"&gt;
+            &lt;div class="custom-notification-container"&gt;
+                &lt;div class="custom-notification-image-wrapper"&gt;
+                    &lt;img src="../../img/elements/popups/popup-1/product.png" style="filter: drop-shadow(6px 17px 19px rgba(0, 0, 0, 0.25));width: 75px; padding-left: 7px"&gt;
+                &lt;/div&gt;
+                &lt;div class="custom-notification-content-wrapper"&gt;
+                    &lt;p class="custom-notification-content"&gt;
+                        &lt;svg height="20" class="hide" style="float: right" viewbox="0 0 20 20" width="20"&gt;
+                        &lt;g fill="none" fill-rule="evenodd" stroke="rgba(0, 0, 0, 0.24)" stroke-linecap="round" stroke-width="2"&gt;
+                            &lt;path d="M5 15L15 5M5 5l10 10"&gt;&lt;/path&gt;
+                        &lt;/g&gt;
+                        &lt;/svg&gt;
+                        &lt;span id="notify-1" style="font-size: 12px;"&gt;
+                        &lt;font style="vertical-align: inherit; font-size: 12px;"&gt;
+                        &lt;font style="vertical-align: inherit; font-size: 12px;"&gt;Людмила - Одеса&lt;/font&gt;
+                        &lt;/font&gt; &lt;/span&gt;&lt;br&gt;
+                        &lt;font style="vertical-align: inherit"&gt;
+                            &lt;p style="vertical-align: inherit; font-size: 12px;font-weight: 600;"&gt;
+                                Отримала "Хондробіон"
+                            &lt;/p&gt; 
+                        &lt;/font&gt;
+                        &lt;span style="display: none"&gt;
+                        &lt;font style="vertical-align: inherit; font-size: 12px;"&gt;
+                        &lt;!-- &lt;font style="vertical-align: inherit"&gt;PaVC% N&lt;/font&gt; --&gt;
+                        &lt;/font&gt;
+                        &lt;/span&gt;
+                        &lt;div id="notify-2" style="font-size: 12px;"&gt;&lt;/div&gt;
+                        &lt;small&gt;&lt;span id="notify-3" style="font-size: 10px;"&gt;
+                        &lt;font style="vertical-align: inherit"&gt;
+                        &lt;font style="vertical-align: inherit; font-size: 10px;"&gt;6 секунд тому&lt;/font&gt;
+                        &lt;/font&gt;
+                        &lt;/span&gt;&lt;/small&gt;
+                        
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="custom-close"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/a&gt;
+                            
+                            
+                            
+                            
+       &lt;!-- CSS --&gt;
+                            
+            
+      .custom-social-proof {
+          position: fixed;
+          right: 10px;
+          top: 10px;
+          z-index: 4 !important;
+      }
+
+      .custom-social-proof .custom-notification {
+          width: 260px;
+          border: 0;
+          text-align: left;
+
+          box-sizing: border-box;
+          font-weight: 400;
+          border-radius: 6px;
+          box-shadow: 2px 2px 10px 2px rgba(11, 10, 10, 0.2);
+          background-color: #fff;
+          position: relative;
+          cursor: pointer;
+      }
+
+      .custom-social-proof .custom-notification .custom-notification-container {
+          display: flex !important;
+          align-items: center;
+          height: 90px;
+          background: #cedae582;
+      }
+
+      .custom-social-proof
+      .custom-notification
+      .custom-notification-container
+      .custom-notification-image-wrapper
+      img {
+          max-height: 75px;
+          width: 65px;
+          overflow: hidden;
+          border-radius: 6px 0 0 6px;
+          object-fit: cover;
+          vertical-align: middle;
+      }
+
+      .custom-social-proof
+      .custom-notification
+      .custom-notification-container
+      .custom-notification-content-wrapper {
+          margin: 0;
+          height: 100%;
+          color: gray;
+          padding-left: 10px;
+          padding-right: 10px;
+          border-radius: 0 6px 6px 0;
+          flex: 1;
+          display: flex !important;
+          flex-direction: column;
+          justify-content: center;
+      }
+
+      .custom-social-proof
+      .custom-notification
+      .custom-notification-container
+      .custom-notification-content-wrapper
+      .custom-notification-content {
+          font-family: inherit !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          font-size: 14px;
+          line-height: 16px;
+      }
+
+      .custom-social-proof
+      .custom-notification
+      .custom-notification-container
+      .custom-notification-content-wrapper
+      .custom-notification-content
+      small {
+          margin-top: 3px !important;
+          display: block !important;
+          font-size: 12px !important;
+          opacity: 0.8;
+      }
+
+      p {
+          font-size: inherit;
+        font-weight: inherit; 
+      }
+
+      * {padding: 0px;
+        margin: 0px;
+        border: none;}
+      *,
+      *::before,
+      *::after {box-sizing: border-box;}
+      a, a:link, a:visited  {text-decoration: none;}
+      a:hover  {text-decoration: none;}
+      aside, nav, footer, header, section, main {
+        display: block;}
+      p {
+          font-size: inherit;
+        font-weight: inherit;}
+      img {
+        vertical-align: top;}
+      img, svg {
+        max-width: 100%;
+        height: auto;}
+      address {
+        font-style: normal;}
+
+                          
+                            
+            &lt;!-- JS --&gt;
+             
+    document.addEventListener("DOMContentLoaded", function() {
+    var recentPur = [
+      ["Васелина – Київ", "3 упаковки", "5 хвилину тому"],
+      ["Галина – Харків", "2 упаковки", "5 хвилину тому"],
+      ["Діна - Полтава", "4 упаковки", "22 хвилину тому"],
+      ["Алевтіна – Київ", "3 упаковки", "23 хвилини тому"],
+      ["Евгенія - Чернігів", "2 упаковки", "24 минуты назад"],
+      ["Серафіма – Одеса", "4 упаковки", "27 хвилин тому"],
+      ["Валентина - Київ", "3 упаковки", "30 хвилин тому"],
+      ["Людмила – Львів", "3 упаковки", "31 хвилину тому"],
+      ["Марія – Харків", "2 упаковки", "33 хвилину тому"],
+      ["Ксенія – Вінниця", "3 упаковки", "36 хвилину тому"],
+      ["Олександра - Суми", "2 упаковки", "45 хвилину тому"],
+      ["Стафанія – Київ", "4 упаковки", "1 хвилину тому"],
+      ["Катерина-Харків", "3 упаковки", "1 хвилину тому"],
+      ["Вікторія – Чернігів", "3 упаковки", "1 хвилину тому"],
+      ["Владеса - Запоріжжя", "4 упаковки", "1 хвилину тому"],
+      ["Любов – Дніпро", "2 упаковки", "1 хвилину тому"]
+    ];
+    let randPur = Math.floor(Math.random() * 10); 
+    let timeRand = Math.round(Math.random() * 29) + 1; 
+    document.getElementById("notify-1").innerHTML = recentPur[randPur][0];
+    document.getElementById("notify-2").innerHTML = recentPur[randPur][1];
+    document.getElementById("notify-3").innerHTML = timeRand + " секунди тому";
+    
+    setInterval(function () {
+        let customSocialProof = document.querySelector(".custom-social-proof");
+        customSocialProof.style.display = (customSocialProof.style.display === "none") ? "block" : "none";
+    
+        if (customSocialProof.style.display === "none") {
+            let randPur = Math.floor(Math.random() * recentPur.length); 
+            document.getElementById("notify-1").innerHTML = recentPur[randPur][0];
+            document.getElementById("notify-2").innerHTML = recentPur[randPur][1];
+            document.getElementById("notify-3").innerHTML = timeRand + " секунди тому";
+        }
+    }, 8000); 
+    
+    document.querySelector(".custom-close").addEventListener("click", function () {
+        document.querySelector(".custom-social-proof").style.display = "none";
+    });
+    
+   
+})
+
+document.querySelector('.hide').addEventListener('click', () => {
+    document.querySelector('.custom-social-proof').style.display = 'none';
+})
+                        </pre>
+
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="../../js/comments/comment-1.js"></script>
+</body>
+
+</html>

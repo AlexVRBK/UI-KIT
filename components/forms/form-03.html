@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Kit - Form-03</title>
+
+  <link rel="stylesheet" href="../../css/elements/elements.css">
+  <link rel="stylesheet" href="../../css/elements/forms/form-3.css">
+
+
+</head>
+
+<body>
+  <div class="demo-page-layout">
+    <main class="demo-content-wrapper">
+      <div class="demo-container">
+
+        <header class="demo-header">
+          <a href="index.html" class="demo-back-link">← Назад к каталогу</a>
+          <h2>Демонстрация: Form-03</h2>
+        </header>
+
+    <section id="med-order">
+    <div class="med-order">
+        <div class="med-order__wrap">
+        </div>
+        <h2 class="med-order__title">Oficiálny formulár žiadosti</h2>
+        <p class="med-order__small">
+            č. 29981 v počte 30 000 kusov
+            <span class="form-data-today">
+
+            </span>
+        </p>
+        <p class="med-order__subtext">
+            Požiadajte o
+            <span class="med-order-hl">Osteomed</span>
+            so
+            <span class="tw-font-bold tw-text-primary">zľavou</span>
+            v rámci vládneho programu.
+        </p>
+        <div class="med-order__product-wrap">
+            <div class="stamps stamps--form">
+                <div class="stamps__inner">
+                    <a href="/">
+                        <img alt="" class="tw-block tw-max-h-[350px] tw-max-w-full" src="../../img/elements/forms/form-3/product.png">
+                    </a>
+                    <div class="stamps__wrapper stamps__wrapper--abs">
+                        <a href="/">
+                            <img src="../../img/elements/forms/form-3/picture-20.png" alt="">
+                            <img src="../../img/elements/forms/form-3/picture-21.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="med-order__pretext">
+            Ak chcete dostávať Osteomed , zadajte svoje meno a telefónne číslo do polí nižšie a kliknite na
+            "ODOSLAŤ ŽIADOSŤ".
+        </p>
+        <form action="api/send.php" autocomplete="off" method="POST" class="order__form form al-form" id="order-form1">
+            <div class="price" style="color: black; text-align:center;">
+                Vzorka Osteomed ZDARMA
+            </div>
+            <select class="al-country" name="country" style="display:none"></select>
+            <div class="form__group">
+                <input type="text" class="form__field" placeholder="Vaše meno" required name="fullName" id="form-name">
+                <label class="form__label" for="form-name">
+                    Vaše meno
+                    <span></span>
+                </label>
+            </div>
+            <div class="form__group">
+                <input type="tel" class="form__field" required placeholder="Vaše telefónne číslo" name="phoneNumber"
+                    id="form-phone">
+                <label class="form__label" for="form-phone">
+                    Vaše telefónne číslo
+                    <span></span>
+                </label>
+            </div>
+
+            <button type="submit" class="form__btn">ODOSLAŤ ŽIADOSŤ</button>
+
+            <input
+                type="hidden"
+                name="country"
+                value="PL" />
+            <input
+                type="hidden"
+                name="language"
+                value="pl" />
+            <input
+                type="hidden"
+                name="offer_id"
+                value="{offer_id}" />
+            <input
+                type="hidden"
+                name="subid"
+                value="{subid}" />
+          
+            <input type="hidden" name="offer_title" value="Oculax" />  
+            <input type="hidden" name="niche" value="vision">
+
+        </form>
+        <p class="med-order__bottom-text">Vaše údaje sa odosielajú priamo výrobcovi. Nikto iný k nim nemá
+            prístup.</p>
+    </div>
+</section>
+        
+
+        <section class="component-demo">
+          <h3>Code: 👇</h3>
+          <pre class="code-block">
+                            &lt;!-- HTML --&gt;
+                            
+          &lt;section id="med-order"&gt;
+    &lt;div class="med-order"&gt;
+        &lt;div class="med-order__wrap"&gt;
+        &lt;/div&gt;
+        &lt;h2 class="med-order__title"&gt;Oficiálny formulár žiadosti&lt;/h2&gt;
+        &lt;p class="med-order__small"&gt;
+            č. 29981 v počte 30 000 kusov
+            &lt;span class="form-data-today"&gt;
+
+            &lt;/span&gt;
+        &lt;/p&gt;
+        &lt;p class="med-order__subtext"&gt;
+            Požiadajte o
+            &lt;span class="med-order-hl"&gt;Osteomed&lt;/span&gt;
+            so
+            &lt;span class="tw-font-bold tw-text-primary"&gt;zľavou&lt;/span&gt;
+            v rámci vládneho programu.
+        &lt;/p&gt;
+        &lt;div class="med-order__product-wrap"&gt;
+            &lt;div class="stamps stamps--form"&gt;
+                &lt;div class="stamps__inner"&gt;
+                    &lt;a href="/"&gt;
+                        &lt;img alt="" class="tw-block tw-max-h-[350px] tw-max-w-full" src="../../img/elements/forms/form-3/product.png"&gt;
+                    &lt;/a&gt;
+                    &lt;div class="stamps__wrapper stamps__wrapper--abs"&gt;
+                        &lt;a href="/"&gt;
+                            &lt;img src="../../img/elements/forms/form-3/picture-20.png" alt=""&gt;
+                            &lt;img src="../../img/elements/forms/form-3/picture-21.png" alt=""&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class="med-order__pretext"&gt;
+            Ak chcete dostávať Osteomed , zadajte svoje meno a telefónne číslo do polí nižšie a kliknite na
+            "ODOSLAŤ ŽIADOSŤ".
+        &lt;/p&gt;
+        &lt;form action="api/send.php" autocomplete="off" method="POST" class="order__form form al-form" id="order-form1"&gt;
+            &lt;div class="price" style="color: black; text-align:center;"&gt;
+                Vzorka Osteomed ZDARMA
+            &lt;/div&gt;
+            &lt;select class="al-country" name="country" style="display:none"&gt;&lt;/select&gt;
+            &lt;div class="form__group"&gt;
+                &lt;input type="text" class="form__field" placeholder="Vaše meno" required name="fullName" id="form-name"&gt;
+                &lt;label class="form__label" for="form-name"&gt;
+                    Vaše meno
+                    &lt;span&gt;&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class="form__group"&gt;
+                &lt;input type="tel" class="form__field" required placeholder="Vaše telefónne číslo" name="phoneNumber"
+                    id="form-phone"&gt;
+                &lt;label class="form__label" for="form-phone"&gt;
+                    Vaše telefónne číslo
+                    &lt;span&gt;&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+
+            &lt;button type="submit" class="form__btn"&gt;ODOSLAŤ ŽIADOSŤ&lt;/button&gt;
+
+            &lt;input
+                type="hidden"
+                name="country"
+                value="PL" /&gt;
+            &lt;input
+                type="hidden"
+                name="language"
+                value="pl" /&gt;
+            &lt;input
+                type="hidden"
+                name="offer_id"
+                value="{offer_id}" /&gt;
+            &lt;input
+                type="hidden"
+                name="subid"
+                value="{subid}" /&gt;
+          
+            &lt;input type="hidden" name="offer_title" value="Oculax" /&gt;  
+            &lt;input type="hidden" name="niche" value="vision"&gt;
+
+        &lt;/form&gt;
+        &lt;p class="med-order__bottom-text"&gt;Vaše údaje sa odosielajú priamo výrobcovi. Nikto iný k nim nemá
+            prístup.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+                            
+                            
+                            
+       &lt;!-- CSS --&gt;
+                            
+     
+#med-order .med-order-hl {
+	font-weight: 700;
+	color: var(--color-primary, #f00);
+}
+
+#med-order .med-order {
+	--form-text-hl: rgb(37 99 235);
+
+	max-width: 590px;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	padding: 32px 16px !important;
+	text-align: center;
+	background-size: 100% 100%;
+	backgroud-position: center;
+	background-repeat: no-repeat;
+	background-image: url(../../../img/elements/forms/form-3/bg-order.jpg);
+	box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%);
+}
+
+#med-order .med-order__sticker {
+	display: inline-block;
+	width: 80px !important;
+	padding: 0 !important;
+}
+
+#med-order .med-order__title {
+	margin: 0 0 16px;
+	padding: 0;
+	font-size: min(50vw, 24px);
+	text-align: center;
+}
+
+#med-order .med-order__title::before,
+#med-order .med-order__title::after {
+	content: none;
+}
+
+#med-order .med-order__wrap {
+	margin-bottom: 16px;
+	text-align: center;
+}
+
+#med-order .med-order__small {
+	/* @apply !text-sm block !py-0 tw-text-blue-600 mb-2; */
+	font-size: 14px;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 8px;
+	color: var(--form-text-hl);
+}
+
+#med-order .med-order__subtext {
+	display: block;
+	margin-bottom: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 0;
+	padding-bottom: 0;
+	text-align: center;
+	max-width: 90%;
+	color: var(--form-text-hl);
+}
+
+#med-order .med-order__product-wrap {
+	/*   tw-relative tw-inline-block */
+	position: relative;
+	display: inline-block;
+}
+
+#med-order .med-order__product-img {
+	/*   !tw-py-0 !tw-max-h-72 !tw-w-auto tw-mx-auto tw-mb-4 */
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 16px;
+	padding-top: 0;
+	padding-bottom: 0;
+	max-height: 350px;
+	width: auto;
+}
+
+#med-order .med-order__prices {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+}
+
+#med-order .med-order__price {
+	font-weight: 700;
+	font-size: 26px;
+}
+
+#med-order .med-order__price.med-order__price--old {
+	color: #5e5e5e;
+	text-decoration: line-through currentColor 3px;
+}
+
+#med-order .med-order__price.med-order__price--new {
+	color: #c11717;
+}
+
+#med-order .med-order__pretext {
+	border-radius: 8px;
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 16px;
+	padding: 12px;
+	font-size: 16px;
+	color: rgb(37 99 235);
+	line-height: 1.2;
+	border: 2px solid rgb(29 78 216);
+}
+
+#med-order .form {
+	--form-gap: 18px;
+
+	width: 100%;
+	margin-bottom: 1rem;
+	font-family: inherit;
+}
+
+#med-order .form__group {
+	position: relative;
+	margin-bottom: calc(var(--form-gap) / 2) !important;
+	padding: var(--form-gap) 0 0 !important;
+	box-sizing: inherit;
+	max-width: 320px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#med-order .form__group:last-of-type {
+	margin-bottom: calc(var(--form-gap) * 1.5) !important;
+}
+
+#med-order .form__field {
+	@apply tw-border tw-border-solid tw-border-blue-600 tw-rounded-md;
+	box-sizing: inherit;
+	display: block;
+	padding: 8px 16px;
+	border: 1px solid rgb(37 99 235);
+	border-radius: 8px;
+	width: 90%;
+	font-family: inherit;
+	font-size: var(--font-size, 18px);
+	line-height: 1;
+	text-align: left;
+	outline: none;
+	height: auto;
+}
+
+#med-order .form__field::-moz-placeholder {
+	color: transparent;
+}
+
+#med-order .form__field:-ms-input-placeholder {
+	color: transparent;
+}
+
+#med-order .form__field::placeholder {
+	color: transparent;
+}
+
+#med-order .form__field:-moz-placeholder-shown~.form__label {
+	top: calc(var(--form-gap) * 1.7);
+	left: 1rem;
+	font-size: var(--font-size);
+	line-height: 1;
+	color: rgba(0, 0, 0, 0.8);
+	cursor: text;
+}
+
+#med-order .form__field:-ms-input-placeholder~.form__label {
+	top: calc(var(--form-gap) * 1.7);
+	left: 1rem;
+	line-height: 1;
+	font-size: var(--font-size);
+	color: rgba(0, 0, 0, 0.8);
+	cursor: text;
+}
+
+#med-order .form__field:placeholder-shown~.form__label {
+	top: calc(var(--form-gap) * 1.7);
+	left: 1rem;
+	line-height: 1;
+	font-size: var(--font-size, 18px);
+	color: rgba(0, 0, 0, 0.8);
+	cursor: text;
+}
+
+#med-order .form__field:focus~.form__label {
+	position: absolute;
+	top: 0;
+	left: 8px;
+	display: block;
+	font-size: 12px;
+	color: #333;
+}
+
+#med-order .form__field:required,
+#med-order .form__field:invalid {
+	box-shadow: none;
+}
+
+#med-order .form__label {
+	position: absolute;
+	top: 0;
+	left: 8px;
+	display: block;
+	font-family: inherit;
+	transition: 0.2s;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 1;
+	color: #333;
+}
+
+#med-order .form__label>span {
+	color: var(--grad-to, #333);
+}
+
+#med-order .form__btn {
+	box-sizing: inherit;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid transparent;
+	border-radius: var(--form-radius, 0.375rem);
+	padding: 10px 16px;
+	width: 90%;
+	height: auto;
+	max-width: 320px;
+	font-weight: 700;
+	font-size: var(--font-size);
+	line-height: 1.2;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: var(--background-color, #2f71f5);
+	border: 1px solid transparent;
+	cursor: pointer;
+	transition-property: color, background-color, border-color;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+
+#med-order .form__btn:hover,
+#med-order .form__btn:focus {
+	color: var(--background-color, #2f71f5);
+	background-color: #fff;
+	border-color: currentColor;
+}
+
+#med-order .med-order__bottom-text {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	line-height: 1.2;
+	color: rgb(37 99 235);
+}
+
+#med-order .med-order__bottom-text:not(:last-child) {
+	margin-bottom: 8px;
+}
+
+#med-order .med-order__title {
+    margin: 0 0 16px;
+    padding: 0;
+    font-size: min(50vw, 24px);
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    font-size: 26px;
+    color: #29292c;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+#med-order .med-order-hl {
+    font-weight: 700;
+    color: #0da4b5;
+}
+#med-order .med-order__product-wrap {
+    position: relative;
+    display: inline-block;
+}
+.stamps--form {
+    position: relative;
+    min-height: 300px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.stamps--form .stamps__inner {
+    position: static;
+}
+.tw-max-w-full {
+    max-width: 100%;
+}
+
+.tw-max-h-\[350px\] {
+    max-height: 350px;
+}
+.tw-block {
+    display: block;
+}
+a img {
+    border: 0;
+}
+.stamps--form .stamps__wrapper--abs {
+    bottom: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column!important;
+}
+.stamps__wrapper--abs {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.stamps--form .stamps__wrapper--abs img {
+    max-height: 80px;
+}
+#med-order .form__group {
+    position: relative;
+    margin-bottom: calc(var(--form-gap) / 2) !important;
+    padding: var(--form-gap) 0 0 !important;
+    box-sizing: inherit;
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+ @media (max-width: 480px) {
+    #med-order .form__btn {
+    width: 80%;
+    }
+   #med-order .form__field  {
+        width: 84%;
+    }
+  }
+
+                        </pre>
+
+        </section>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>

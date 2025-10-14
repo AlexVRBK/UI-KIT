@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Kit - Popup-01</title>
+
+  <link rel="stylesheet" href="../../css/elements/elements.css">
+  <link rel="stylesheet" href="../../css/elements/popups/popup-1.css">
+</head>
+
+<body>
+
+   <a href="#">
+        <section class="custom-social-proof" style="display: none;">
+            <div class="custom-notification">
+                <div class="custom-notification-container">
+                    <div class="custom-notification-image-wrapper">
+                        <img src="../../img/elements/popups/popup-1/product.png" style="filter: drop-shadow(6px 17px 19px rgba(0, 0, 0, 0.25));width: 75px; padding-left: 7px">
+                    </div>
+                    <div class="custom-notification-content-wrapper">
+                        <p class="custom-notification-content">
+                            <svg height="20" class="hide" style="float: right" viewbox="0 0 20 20" width="20">
+                            <g fill="none" fill-rule="evenodd" stroke="rgba(0, 0, 0, 0.24)" stroke-linecap="round" stroke-width="2">
+                                <path d="M5 15L15 5M5 5l10 10"></path>
+                            </g>
+                            </svg>
+                            <span id="notify-1" style="font-size: 12px;">
+                            <font style="vertical-align: inherit; font-size: 12px;">
+                            <font style="vertical-align: inherit; font-size: 12px;">Людмила - Одеса</font>
+                            </font> </span><br>
+                            <font style="vertical-align: inherit">
+                                <p style="vertical-align: inherit; font-size: 12px;font-weight: 600;">
+                                    Отримала "Хондробіон"
+                                </p> 
+                            </font>
+                                <span style="display: none">
+                            <font style="vertical-align: inherit; font-size: 12px;">
+                            <!-- <font style="vertical-align: inherit">PaVC% N</font> -->
+                            </font>
+                            </span>
+                            <div id="notify-2" style="font-size: 12px;"></div>
+                                <small><span id="notify-3" style="font-size: 10px;">
+                            <font style="vertical-align: inherit">
+                            <font style="vertical-align: inherit; font-size: 10px;">6 секунд тому</font>
+                            </font>
+                            </span></small>
+                        
+                    </div>
+                </div>
+                <div class="custom-close"></div>
+            </div>
+        </section>
+    </a>
+
+  <div class="demo-page-layout">
+    <main class="demo-content-wrapper">
+      <div class="demo-container">
+
+        <header class="demo-header">
+          <a href="index.html" class="demo-back-link">← Назад к каталогу</a>
+          <h2>Демонстрация: Popup-01</h2>
+        </header>
+
+       
+
+        <section class="component-demo">
+          <h3>Code: 👇</h3>
+          <pre class="code-block">
+           &lt;!-- HTML --&gt; &lt;!вставить после тега &lt;body&gt;&gt;
+                                  
+          &lt;a href="#"&gt;
+    &lt;section class="custom-social-proof" style="display: none;"&gt;
+        &lt;div class="custom-notification"&gt;
+            &lt;div class="custom-notification-container"&gt;
+                &lt;div class="custom-notification-image-wrapper"&gt;
+                    &lt;img src="../../img/elements/popups/popup-1/product.png" style="filter: drop-shadow(6px 17px 19px rgba(0, 0, 0, 0.25));width: 75px; padding-left: 7px"&gt;
+                &lt;/div&gt;
+                &lt;div class="custom-notification-content-wrapper"&gt;
+                    &lt;p class="custom-notification-content"&gt;
+                        &lt;svg height="20" class="hide" style="float: right" viewbox="0 0 20 20" width="20"&gt;
+                        &lt;g fill="none" fill-rule="evenodd" stroke="rgba(0, 0, 0, 0.24)" stroke-linecap="round" stroke-width="2"&gt;
+                            &lt;path d="M5 15L15 5M5 5l10 10"&gt;&lt;/path&gt;
+                        &lt;/g&gt;
+                        &lt;/svg&gt;
+                        &lt;span id="notify-1" style="font-size: 12px;"&gt;
+                        &lt;font style="vertical-align: inherit; font-size: 12px;"&gt;
+                        &lt;font style="vertical-align: inherit; font-size: 12px;"&gt;Людмила - Одеса&lt;/font&gt;
+                        &lt;/font&gt; &lt;/span&gt;&lt;br&gt;
+                        &lt;font style="vertical-align: inherit"&gt;
+                            &lt;p style="vertical-align: inherit; font-size: 12px;font-weight: 600;"&gt;
+                                Отримала "Хондробіон"
+                            &lt;/p&gt; 
+                        &lt;/font&gt;
+                        &lt;span style="display: none"&gt;
+                        &lt;font style="vertical-align: inherit; font-size: 12px;"&gt;
+                        &lt;!-- &lt;font style="vertical-align: inherit"&gt;PaVC% N&lt;/font&gt; --&gt;
+                        &lt;/font&gt;
+                        &lt;/span&gt;
+                        &lt;div id="notify-2" style="font-size: 12px;"&gt;&lt;/div&gt;
+                        &lt;small&gt;&lt;span id="notify-3" style="font-size: 10px;"&gt;
+                        &lt;font style="vertical-align: inherit"&gt;
+                        &lt;font style="vertical-align: inherit; font-size: 10px;"&gt;6 секунд тому&lt;/font&gt;
+                        &lt;/font&gt;
+                        &lt;/span&gt;&lt;/small&gt;
+                        
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="custom-close"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/a&gt;
+                            
+                            
+                            
+                            
+       &lt;!-- CSS --&gt;
+                            
+            
+      .custom-social-proof {
+          position: fixed;
+          right: 10px;
+          top: 10px;
+          z-index: 4 !important;
+      }
+
+      .custom-social-proof .custom-notification {
+          width: 260px;
+          border: 0;
+          text-align: left;
+
+          box-sizing: border-box;
+          font-weight: 400;
+          border-radius: 6px;
+          box-shadow: 2px 2px 10px 2px rgba(11, 10, 10, 0.2);
+          background-color: #fff;
+          position: relative;
+          cursor: pointer;
+      }
+
+      .custom-social-proof .custom-notification .custom-notification-container {
+          display: flex !important;
+          align-items: center;
+          height: 90px;
+          background: #cedae582;
+      }
+
+      .custom-social-proof
+      .custom-notification
+      .custom-notification-container
+      .custom-notification-image-wrapper
+      img {
+          max-height: 75px;
+          width: 65px;
+          overflow: hidden;
+          border-radius: 6px 0 0 6px;
+          object-fit: cover;
+          vertical-align: middle;
+      }
+
+      .custom-social-proof
+      .custom-notification
+      .custom-notification-container
+      .custom-notification-content-wrapper {
+          margin: 0;
+          height: 100%;
+          color: gray;
+          padding-left: 10px;
+          padding-right: 10px;
+          border-radius: 0 6px 6px 0;
+          flex: 1;
+          display: flex !important;
+          flex-direction: column;
+          justify-content: center;
+      }
+
+      .custom-social-proof
+      .custom-notification
+      .custom-notification-container
+      .custom-notification-content-wrapper
+      .custom-notification-content {
+          font-family: inherit !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          font-size: 14px;
+          line-height: 16px;
+      }
+
+      .custom-social-proof
+      .custom-notification
+      .custom-notification-container
+      .custom-notification-content-wrapper
+      .custom-notification-content
+      small {
+          margin-top: 3px !important;
+          display: block !important;
+          font-size: 12px !important;
+          opacity: 0.8;
+      }
+
+      p {
+          font-size: inherit;
+        font-weight: inherit; 
+      }
+
+      * {padding: 0px;
+        margin: 0px;
+        border: none;}
+      *,
+      *::before,
+      *::after {box-sizing: border-box;}
+      a, a:link, a:visited  {text-decoration: none;}
+      a:hover  {text-decoration: none;}
+      aside, nav, footer, header, section, main {
+        display: block;}
+      p {
+          font-size: inherit;
+        font-weight: inherit;}
+      img {
+        vertical-align: top;}
+      img, svg {
+        max-width: 100%;
+        height: auto;}
+      address {
+        font-style: normal;}
+
+                          
+                            
+            &lt;!-- JS --&gt;
+             
+    document.addEventListener("DOMContentLoaded", function() {
+    var recentPur = [
+      ["Васелина – Київ", "3 упаковки", "5 хвилину тому"],
+      ["Галина – Харків", "2 упаковки", "5 хвилину тому"],
+      ["Діна - Полтава", "4 упаковки", "22 хвилину тому"],
+      ["Алевтіна – Київ", "3 упаковки", "23 хвилини тому"],
+      ["Евгенія - Чернігів", "2 упаковки", "24 минуты назад"],
+      ["Серафіма – Одеса", "4 упаковки", "27 хвилин тому"],
+      ["Валентина - Київ", "3 упаковки", "30 хвилин тому"],
+      ["Людмила – Львів", "3 упаковки", "31 хвилину тому"],
+      ["Марія – Харків", "2 упаковки", "33 хвилину тому"],
+      ["Ксенія – Вінниця", "3 упаковки", "36 хвилину тому"],
+      ["Олександра - Суми", "2 упаковки", "45 хвилину тому"],
+      ["Стафанія – Київ", "4 упаковки", "1 хвилину тому"],
+      ["Катерина-Харків", "3 упаковки", "1 хвилину тому"],
+      ["Вікторія – Чернігів", "3 упаковки", "1 хвилину тому"],
+      ["Владеса - Запоріжжя", "4 упаковки", "1 хвилину тому"],
+      ["Любов – Дніпро", "2 упаковки", "1 хвилину тому"]
+    ];
+    let randPur = Math.floor(Math.random() * 10); 
+    let timeRand = Math.round(Math.random() * 29) + 1; 
+    document.getElementById("notify-1").innerHTML = recentPur[randPur][0];
+    document.getElementById("notify-2").innerHTML = recentPur[randPur][1];
+    document.getElementById("notify-3").innerHTML = timeRand + " секунди тому";
+    
+    setInterval(function () {
+        let customSocialProof = document.querySelector(".custom-social-proof");
+        customSocialProof.style.display = (customSocialProof.style.display === "none") ? "block" : "none";
+    
+        if (customSocialProof.style.display === "none") {
+            let randPur = Math.floor(Math.random() * recentPur.length); 
+            document.getElementById("notify-1").innerHTML = recentPur[randPur][0];
+            document.getElementById("notify-2").innerHTML = recentPur[randPur][1];
+            document.getElementById("notify-3").innerHTML = timeRand + " секунди тому";
+        }
+    }, 8000); 
+    
+    document.querySelector(".custom-close").addEventListener("click", function () {
+        document.querySelector(".custom-social-proof").style.display = "none";
+    });
+    
+   
+})
+
+document.querySelector('.hide').addEventListener('click', () => {
+    document.querySelector('.custom-social-proof').style.display = 'none';
+})
+                        </pre>
+
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="../../js/popups/popup-1.js"></script>
+</body>
+
+</html>

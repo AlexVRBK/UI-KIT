@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Kit - Form-01</title>
+
+  <link rel="stylesheet" href="../../css/elements/elements.css">
+  <link rel="stylesheet" href="../../css/elements/timers/timer-1.css">
+
+  
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+  <div class="d-tmr">
+        <div class="d-tmr-flx">
+            Успеј да наручиш за
+            <div class="timer" data-time="900" style="color: red; font-weight: bold; padding: 5px;">
+                <span class="min">15</span>:<span class="sec">00</span>
+            </div>
+            и добијеш попуст од 50%
+        </div>
+        <a href="#" class="d-tmr-btn">Наручити</a>
+    </div>
+  <div class="demo-page-layout">
+    <main class="demo-content-wrapper">
+      <div class="demo-container">
+
+        <header class="demo-header">
+          <a href="index.html" class="demo-back-link">← Назад к каталогу</a>
+          <h2>Демонстрация: Form-01</h2>
+        </header>
+
+        
+
+        <section class="component-demo">
+          <h3>Code: 👇</h3>
+          <pre class="code-block">
+      &lt;!-- HTML --&gt; &lt;!вставить после тега &lt;body&gt;&gt;
+                            
+     &lt;div class="d-tmr"&gt;
+      &lt;div class="d-tmr-flx"&gt;
+          Успеј да наручиш за
+          &lt;div class="timer" data-time="900" style="color: red; font-weight: bold; padding: 5px;"&gt;
+              &lt;span class="min"&gt;15&lt;/span&gt;:&lt;span class="sec"&gt;00&lt;/span&gt;
+          &lt;/div&gt;
+          и добијеш попуст од 50%
+      &lt;/div&gt;
+      &lt;a href="#" class="d-tmr-btn"&gt;Наручити&lt;/a&gt;
+    &lt;/div&gt;
+                            
+                            
+                            
+       &lt;!-- CSS --&gt;
+                            
+    .d-tmr {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20px;
+	background: rgba(0, 0, 0, 0.3);
+	backdrop-filter: saturate(180%) blur(12px);
+	-webkit-backdrop-filter: saturate(180%) blur(12px);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	border-radius: 15px 15px 0 0;
+	font-weight: bold;
+	font-size: 1rem;
+	color: #fff;
+	z-index: 9999999999;
+
+	transform-origin: bottom center;
+	transition: opacity 0.4s ease, transform 0.4s ease;
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.d-tmr.hidden {
+	opacity: 0;
+	transform: scale(0.95);
+	pointer-events: none;
+}
+
+.d-tmr-flx {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.timer {
+	font-weight: bold;
+	color: #ff3b30;
+	/* красный цвет */
+	padding: 5px 8px;
+	font-size: 1.1rem;
+	min-width: 70px;
+	text-align: center;
+	user-select: none;
+}
+
+.d-tmr-btn {
+	padding: 6px 16px;
+	background-color: #ff3b30;
+	color: #fff;
+	border-radius: 14px;
+	font-weight: 600;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	user-select: none;
+	box-shadow: 0 4px 15px rgba(255, 59, 48, 0.6);
+	border: none;
+	margin-left: 24px;
+}
+
+.d-tmr-btn:hover {
+	background-color: #ff6659;
+}
+
+@media (max-width: 700px) {
+	.d-tmr {
+		height: auto;
+		flex-direction: column;
+		padding: 10px 15px;
+		border-radius: 15px;
+		gap: 10px;
+	}
+
+	.d-tmr-flx {
+		justify-content: center;
+	}
+
+	.d-tmr-btn {
+		margin: 0;
+		width: 100%;
+		max-width: 220px;
+		text-align: center;
+	}
+}
+
+                          
+                            
+            &lt;!-- JS --&gt;
+             
+   (function ($) {
+  function initTimer($timer, duration = 1100) {
+    let timeLeft = duration;
+
+    const intervalId = setInterval(() => {
+      if (timeLeft <= 0) {
+        clearInterval(intervalId);
+        return;
+      }
+
+      timeLeft--;
+
+      const mins = Math.floor(timeLeft / 60)
+        .toString()
+        .padStart(2, "0");
+      const secs = (timeLeft % 60).toString().padStart(2, "0");
+
+      $timer.find(".min").text(mins);
+      $timer.find(".sec").text(secs);
+    }, 1000);
+  }
+
+  $(() =>
+    $(".timer").each((i, el) => {
+      const $timer = $(el);
+      const duration = parseInt($timer.data("time"), 10) || 1100;
+      initTimer($timer, duration);
+    })
+  );
+
+  window.startTimer = (selector, duration = 1100) => {
+    const $timer = $(selector);
+    initTimer($timer, duration);
+  };
+
+  $(() => {
+    const dTmr = document.querySelector(".d-tmr");
+    const pachinoform = document.querySelector(".pachinoform");
+
+    if (!dTmr || !pachinoform) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            dTmr.classList.add("hidden");
+          } else {
+            dTmr.classList.remove("hidden");
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.1,
+      }
+    );
+
+    observer.observe(pachinoform);
+  });
+})(jQuery);
+
+                        </pre>
+
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="../../js/timers/timer-1.js"></script>
+</body>
+
+</html>

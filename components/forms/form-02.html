@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Kit - Form-02</title>
+
+  <link rel="stylesheet" href="../../css/elements/elements.css">
+  <link rel="stylesheet" href="../../css/elements/forms/form-2.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div class="demo-page-layout">
+    <main class="demo-content-wrapper">
+      <div class="demo-container">
+
+        <header class="demo-header">
+          <a href="index.html" class="demo-back-link">← Назад к каталогу</a>
+          <h2>Демонстрация: Form-02</h2>
+        </header>
+
+       <div class="ruletka-p" id="roulette"></div>
+
+    <div class="bilet">
+        <div class="text-column">
+            <img class="gerbmobile" src="../../img/elements/forms/form-2/med.png" style="width: 100%; max-width: 50px;">
+            <p>Национальный лотерейный билет<br>№1000 8976 2456 654 </p>
+            <img src="../../img/elements/forms/form-2/product.png" style="width:100%;max-width:200px;" alt="">
+        </div>
+        <div class="erase_column">
+            <div class="erase">
+                <div class="erase_text">Нажмите на защитный слой, чтобы стереть его</div>
+                <div class="arrow"></div>
+                <div id="square">
+                    <button class="qqq" onclick="replace();return false"></button>
+                </div>
+                <div id="square2"></div>
+            </div>
+            <div class="blabla">
+                <p>Билет разыгрывает скидку до 100% только на препарат "Голубитокс"</p>
+                <br>
+                <p>Национальный розыгрыш по распоряжению Медицинского Фонда Украины</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="order_block">
+        <div>
+            <img src="../../img/elements/forms/form-2/product.png" style="width: 100%; max-width: 201px;margin-bottom: 21px;">
+        </div>
+        <h3>
+            Все что Вам нужно — это ввести имя и номер телефона.<br>
+            Поторопитесь! У Вас осталось времени:<br>
+            <span class="time_remains" id="min">10</span> : <span class="time_remains" id="sec">00</span>
+        </h3>
+        <form id="order_form" method="POST"  action="api/send.php" autocomplete="off">
+            <input type="text" class="input-roulette" name="fullName" id="input-name" placeholder="Ваше имя" required>
+            <input type="tel" class="input-roulette" name="phoneNumber" id="input-phone" placeholder="Ваш телефон" required >
+            <button type="submit" class="submit-roulette">Получить БЕСПЛАТНО*</button>
+            <p class="danger-text" style="font-size:10px;">*при покупке курса</p>
+        </form>
+    </div>
+
+    <div class="spin-result-wrapper">
+        <div class="pop-up-window">
+            <div class="close-popup"></div>
+            <span class="pop-up-heading">Поздравляем!</span>
+            <p class="ruletka-p pop-up-text">Вы можете забрать средство <span class="danger-text">БЕСПЛАТНО*!</span></p>
+            <a class="pop-up-button" href="#roulette">OK</a>
+        </div>
+    </div>
+        
+
+        <section class="component-demo">
+          <h3>Code: 👇</h3>
+          <pre class="code-block">
+                            &lt;!-- HTML --&gt;
+                            
+                           &lt;div class="ruletka-p" id="roulette"&gt;&lt;/div&gt;
+
+&lt;div class="bilet"&gt;
+    &lt;div class="text-column"&gt;
+        &lt;img class="gerbmobile" src="../../img/elements/forms/form-2/med.png" style="width: 100%; max-width: 50px;"&gt;
+        &lt;p&gt;Национальный лотерейный билет&lt;br&gt;№1000 8976 2456 654 &lt;/p&gt;
+        &lt;img src="../../img/elements/forms/form-2/product.png" style="width:100%;max-width:200px;" alt=""&gt;
+    &lt;/div&gt;
+    &lt;div class="erase_column"&gt;
+        &lt;div class="erase"&gt;
+            &lt;div class="erase_text"&gt;Нажмите на защитный слой, чтобы стереть его&lt;/div&gt;
+            &lt;div class="arrow"&gt;&lt;/div&gt;
+            &lt;div id="square"&gt;
+                &lt;button class="qqq" onclick="replace();return false"&gt;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div id="square2"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="blabla"&gt;
+            &lt;p&gt;Билет разыгрывает скидку до 100% только на препарат "Голубитокс"&lt;/p&gt;
+            &lt;br&gt;
+            &lt;p&gt;Национальный розыгрыш по распоряжению Медицинского Фонда Украины&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="order_block"&gt;
+    &lt;div&gt;
+        &lt;img src="../../img/elements/forms/form-2/product.png" style="width: 100%; max-width: 201px;margin-bottom: 21px;"&gt;
+    &lt;/div&gt;
+    &lt;h3&gt;
+        Все что Вам нужно — это ввести имя и номер телефона.&lt;br&gt;
+        Поторопитесь! У Вас осталось времени:&lt;br&gt;
+        &lt;span class="time_remains" id="min"&gt;10&lt;/span&gt; : &lt;span class="time_remains" id="sec"&gt;00&lt;/span&gt;
+    &lt;/h3&gt;
+    &lt;form id="order_form" method="POST" action=""&gt;
+        &lt;input type="text" class="input-roulette" name="name" id="input-name" placeholder="Ваше имя" autocomplete="name" required&gt;
+        &lt;input type="tel" class="input-roulette" name="phone" id="input-phone" placeholder="Ваш телефон" autocomplete="tel" required &gt;
+        &lt;button type="submit" class="submit-roulette"&gt;Получить БЕСПЛАТНО*&lt;/button&gt;
+        &lt;p class="danger-text" style="font-size:10px;"&gt;*при покупке курса&lt;/p&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+
+&lt;div class="spin-result-wrapper"&gt;
+    &lt;div class="pop-up-window"&gt;
+        &lt;div class="close-popup"&gt;&lt;/div&gt;
+        &lt;span class="pop-up-heading"&gt;Поздравляем!&lt;/span&gt;
+        &lt;p class="ruletka-p pop-up-text"&gt;Вы можете забрать средство &lt;span class="danger-text"&gt;БЕСПЛАТНО*!&lt;/span&gt;&lt;/p&gt;
+        &lt;a class="pop-up-button" href="#roulette"&gt;OK&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                            
+                            
+                            
+       &lt;!-- CSS --&gt;
+                            
+           .erase_text, .text-column {
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+article p {
+    text-align: justify;
+}
+.bilet {
+    color: #000;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    border: 4px solid #0394a5;
+    border-radius: 5px;
+    background: transparent linear-gradient(#fff, #7cbfc3) repeat scroll 0 0
+}
+
+.text-column {
+    flex: 2 1 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center
+}
+
+.text-column p {
+    margin-bottom: 0
+}
+
+.text-column p:first-child {
+    text-transform: uppercase;
+    text-align: center
+}
+
+.blabla p:last-child {
+    font-size: .7em;
+    margin: 0
+}
+
+.erase_column {
+    flex: 3 1 0%;
+    padding: 1em;
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.erase {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.logo {
+    background: transparent url(../images/tov.png) no-repeat scroll center center;
+    width: 250px;
+    height: 260px
+}
+
+@media screen and (max-width:550px) {
+    .gerbpk {
+        display: none !important
+    }
+
+    .gerbmobile {
+        display: block !important;
+        margin: 0 auto !important
+    }
+}
+
+@media screen and (min-width:550px) {
+    .gerbmobile {
+        display: none !important
+    }
+}
+
+@media screen and (max-width:550px) {
+    .erase {
+        justify-content: center
+    }
+}
+
+@media screen and (max-width:350px) {
+
+    .erase_column,
+    .text-column {
+        padding: 5px
+    }
+}
+
+.submit-roulette {
+    text-transform: uppercase;
+    padding: 8px 13px;
+    margin: 15px 0;
+    outline: 0;
+    border: none;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 3px #242120;
+    background: red;
+    color: #fff;
+    font-weight: 700;
+    transition: background .3s;
+    cursor: pointer
+}
+
+.submit-roulette:hover {
+    background: #b00;
+    transition: background .3s
+}
+
+.submit-roulette:active {
+    transform: translateY(2px);
+    box-shadow: none
+}
+
+input[value="Получить бесплатно"] {
+    text-transform: uppercase;
+    padding: 10px 15px;
+    margin: 15px 0;
+    outline: 0;
+    border: none;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 3px #242120;
+    background: red;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .3s
+}
+
+input[value="Получить бесплатно"]:hover {
+    background: #b00 !important;
+    transition: background .3s
+}
+
+input[value="Получить бесплатно"]:active {
+    transform: translateY(2px);
+    box-shadow: none !important
+}
+
+.input-roulette {
+    display: block;
+    width: 300px !important;
+    max-width: 80%;
+    padding: 6px 10px;
+    border: #888 1px solid;
+    margin-top: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #fff;
+    margin-bottom: 5px
+}
+
+input[placeholder="Ваш телефон"],
+input[placeholder="Ваше имя"] {
+    font-size: 18px;
+    color: #333;
+    display: block;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
+.ruletka-p {
+    text-indent: 0;
+    color: #000;
+    text-align: center !important;
+    margin: 15px;
+    line-height: 25px;
+    font-weight: 700
+}
+
+.ruletka-p h2 {
+    font-size: 25px;
+    margin-bottom: 15px
+}
+
+.ruletka-a {
+    color: #1697ce
+}
+
+.spin-wrapper {
+    box-shadow: 0 0 10px;
+    border: 3px solid red;
+    padding: 20px 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box
+}
+
+.spin-wrapper .ruletka-p {
+    margin-bottom: 15px
+}
+
+.danger-text {
+    color: red;
+    font-weight: 700
+}
+
+.wheel {
+    width: 380px !important;
+    margin: 0 auto;
+    position: relative
+}
+
+.wheel img {
+    max-width: 100%
+}
+
+.wheel-img {
+    transition: all 4s ease 0s
+}
+
+.wheel-cursor {
+    position: absolute;
+    width: 35% !important;
+    height: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.cursor-text {
+    position: absolute;
+    z-index: 2;
+    display: inline-block;
+    width: 45% !important;
+    height: 45%;
+    font: 16px/61px Arial !important;
+    cursor: pointer;
+    border-radius: 50%;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #ccc;
+    top: 49%;
+    left: 50%;
+    -moz-user-select: none;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 -2px 0 #fff inset, 0 2px 0 #fff inset, 0 0 5px rgba(0, 0, 0, .4);
+    background: transparent radial-gradient(ellipse at center center, #fff 0, #eaeaea 100%) repeat scroll 0 0
+}
+
+.order_block {
+    display: none;
+    text-align: center !important
+}
+
+.order_block img {
+    width: 20%
+}
+
+.order_block h3 {
+    font: 700 18px Arial !important;
+    background: transparent none repeat scroll 0 0
+}
+
+#ad1_form,
+#adbees_form,
+#adeptcpa_form,
+#apilead_form,
+#burg_tl_form,
+#cpagetti_form,
+#crm_form,
+#drcash_form,
+#everad_form,
+#hp_form,
+#kma_form,
+#leadbit_form,
+#leadtrade_form,
+#luckyshop_form,
+#m_leads,
+#monsterleads_form,
+#omni_form,
+#p_hp_form,
+#p_omni_form,
+#profit_form2,
+#pw_hp_form,
+#rocket_form,
+#scpa_pw_ad1_form,
+#scpa_pw_apilead_form,
+#scpa_pw_drcash_form,
+#scpa_pw_hp_form,
+#scpa_pw_leadtrade_form,
+#scpa_pw_tl_form,
+#shakes_form,
+#tl_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.time_remains {
+    font-size: 1.1em;
+    color: red;
+    font-weight: 700
+}
+
+.spin-result-wrapper {
+    display: none;
+    padding: 0 10px;
+    box-sizing: border-box;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    left: 0;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .6);
+    text-align: center
+}
+
+.pop-up-window {
+    position: relative;
+    max-width: 400px;
+    right: 0;
+    left: 0;
+    top: 40%;
+    margin: 0 auto;
+    background: #fff none repeat scroll 0 0;
+    text-align: center;
+    padding: 70px 10px 20px;
+    border-radius: 10px;
+    animation: .7s ease 0s normal none 1 running pop-up-appear
+}
+
+.close-popup {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url(../../../img/elements/forms/form-2/cross.svg);
+    background-size: 100% auto;
+    top: -40px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff;
+    right: -40px;
+    cursor: pointer
+}
+
+.pop-up-heading {
+    font-size: 40px;
+    margin-bottom: 20px
+}
+
+.pop-up-text {
+    margin-bottom: 25px;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center !important
+}
+
+.pop-up-button {
+    text-transform: uppercase;
+    text-decoration: none !important;
+    padding: 10px 20%;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #71c341;
+    color: #fff !important;
+    border: medium;
+    cursor: pointer;
+    outline: medium
+}
+
+.super-rotation {
+    animation-name: super-rotation;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+    transition-timing-function: ease-in-out
+}
+
+@keyframes super-rotation {
+    70% {
+        transform: rotate(1783deg)
+    }
+
+    100% {
+        transform: rotate(1774deg)
+    }
+}
+
+.cursor-text:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, .4) inset
+}
+
+.pop-up-layer {
+    position: fixed !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, .7) !important;
+    z-index: 99 !important
+}
+
+.pop-up-layer-show {
+    display: block
+}
+
+.pop-up-window {
+    position: relative;
+    max-width: 400px;
+    right: 0;
+    left: 0;
+    top: 40%;
+    margin: 0 auto;
+    background: #fff none repeat scroll 0 0;
+    text-align: center;
+    padding: 70px 10px 20px;
+    border-radius: 10px;
+    animation: .7s ease 0s normal none 1 running pop-up-appear
+}
+
+.pop-up-window::before {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    top: -55px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: #71c341;
+    border-radius: 50%;
+    animation: .5s ease .6s normal backwards 1 running pop-up-appear-before
+}
+
+.pop-up-window::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    top: -20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-width: medium medium 4px 4px;
+    border-style: none none solid solid;
+    border-color: currentcolor currentcolor #fff #fff;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    transform: rotate(-45deg);
+    transition: opacity 1s ease 0s;
+    animation: .5s ease .6s normal backwards 1 running pop-up-appear-after
+}
+
+.text_small {
+    font-size: .5em !important;
+    font-weight: 400 !important
+}
+
+@keyframes pop-up-appear {
+    0% {
+        transform: translateY(-2000px)
+    }
+
+    30% {
+        transform: translateY(100px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+
+@keyframes pop-up-appear-before {
+    0% {
+        transform: scale(0)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+@keyframes pop-up-appear-after {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.pop-up-button:hover {
+    color: #fff !important;
+    text-decoration: none !important
+}
+
+@media all and (max-width:520px) {
+    .wheel {
+        width: 280px !important
+    }
+
+    .cursor-text {
+        line-height: 45px !important;
+        font-size: 12px !important
+    }
+
+    @media screen and (max-width:345px) {
+        .wheel {
+            width: 250px !important
+        }
+
+        .cursor-text {
+            line-height: 40px !important;
+            font-size: 11px !important
+        }
+    }
+}
+
+
+#square,
+#square2,
+.qqq {
+    width: 200px;
+    height: 50px;
+    border-radius: 3em;
+    align-self: center
+}
+
+#square {
+    background: #969595 none repeat scroll 0 0;
+    cursor: pointer
+}
+
+#square2 {
+    background: transparent url(../../../img/elements/forms/form-2/discount98.png) no-repeat scroll center center;
+    display: none
+}
+
+.qqq {
+    outline: medium;
+    background: transparent none repeat scroll 0 0;
+    border: 1px solid #969595
+}
+
+.arrow {
+    background: transparent url(../../../img/elements/forms/form-2/arrow1.png) no-repeat scroll center center;
+    width: 70px;
+    height: 65px;
+    align-self: center;
+    margin: 1em
+}
+
+.bilet {
+    color: #000;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    border: 4px solid #0394a5;
+    border-radius: 5px;
+    background: transparent linear-gradient(#fff, #7cbfc3) repeat scroll 0 0
+}
+
+.text-column {
+    flex: 2 1 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center
+}
+
+.text-column p {
+    margin-bottom: 0
+}
+
+.text-column p:first-child {
+    text-transform: uppercase;
+    text-align: center
+}
+
+.blabla p:last-child {
+    font-size: .7em;
+    margin: 0
+}
+
+.erase_column {
+    flex: 3 1 0%;
+    padding: 1em;
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.erase {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.logo {
+    background: transparent url(../../../img/elements/forms/form-2/product.png) no-repeat scroll center center;
+    width: 250px;
+    height: 260px
+}
+
+@media screen and (max-width:550px) {
+    .gerbpk {
+        display: none !important
+    }
+
+    .gerbmobile {
+        display: block !important;
+        margin: 0 auto !important
+    }
+}
+
+@media screen and (min-width:550px) {
+    .gerbmobile {
+        display: none !important
+    }
+}
+
+@media screen and (max-width:550px) {
+    .erase {
+        justify-content: center
+    }
+}
+
+@media screen and (max-width:350px) {
+
+    .erase_column,
+    .text-column {
+        padding: 5px
+    }
+}
+
+.submit-roulette {
+    text-transform: uppercase;
+    padding: 8px 13px;
+    margin: 15px 0;
+    outline: 0;
+    border: none;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 3px #242120;
+    background: red;
+    color: #fff;
+    font-weight: 700;
+    transition: background .3s;
+    cursor: pointer
+}
+
+.submit-roulette:hover {
+    background: #b00;
+    transition: background .3s
+}
+
+.submit-roulette:active {
+    transform: translateY(2px);
+    box-shadow: none
+}
+
+input[value="Получить бесплатно"] {
+    text-transform: uppercase;
+    padding: 10px 15px;
+    margin: 15px 0;
+    outline: 0;
+    border: none;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 3px #242120;
+    background: red;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .3s
+}
+
+input[value="Получить бесплатно"]:hover {
+    background: #b00 !important;
+    transition: background .3s
+}
+
+input[value="Получить бесплатно"]:active {
+    transform: translateY(2px);
+    box-shadow: none !important
+}
+
+.input-roulette {
+    display: block;
+    width: 300px !important;
+    max-width: 80%;
+    padding: 6px 10px;
+    border: #888 1px solid;
+    margin-top: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #fff;
+    margin-bottom: 5px
+}
+
+input[placeholder="Ваш телефон"],
+input[placeholder="Ваше имя"] {
+    font-size: 18px;
+    color: #333;
+    display: block;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
+.ruletka-p {
+    text-indent: 0;
+    color: #000;
+    text-align: center !important;
+    margin: 15px;
+    line-height: 25px;
+    font-weight: 700
+}
+
+.ruletka-p h2 {
+    font-size: 25px;
+    margin-bottom: 15px
+}
+
+.ruletka-a {
+    color: #1697ce
+}
+
+.spin-wrapper {
+    box-shadow: 0 0 10px;
+    border: 3px solid red;
+    padding: 20px 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box
+}
+
+.spin-wrapper .ruletka-p {
+    margin-bottom: 15px
+}
+
+.danger-text {
+    color: red;
+    font-weight: 700
+}
+
+.wheel {
+    width: 380px !important;
+    margin: 0 auto;
+    position: relative
+}
+
+.wheel img {
+    max-width: 100%
+}
+
+.wheel-img {
+    transition: all 4s ease 0s
+}
+
+.wheel-cursor {
+    position: absolute;
+    width: 35% !important;
+    height: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.cursor-text {
+    position: absolute;
+    z-index: 2;
+    display: inline-block;
+    width: 45% !important;
+    height: 45%;
+    font: 16px/61px Arial !important;
+    cursor: pointer;
+    border-radius: 50%;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #ccc;
+    top: 49%;
+    left: 50%;
+    -moz-user-select: none;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 -2px 0 #fff inset, 0 2px 0 #fff inset, 0 0 5px rgba(0, 0, 0, .4);
+    background: transparent radial-gradient(ellipse at center center, #fff 0, #eaeaea 100%) repeat scroll 0 0
+}
+
+.order_block {
+    display: none;
+    text-align: center !important
+}
+
+.order_block img {
+    width: 20%
+}
+
+.order_block h3 {
+    font: 700 18px Arial !important;
+    background: transparent none repeat scroll 0 0
+}
+
+#ad1_form,
+#adbees_form,
+#adeptcpa_form,
+#apilead_form,
+#burg_tl_form,
+#cpagetti_form,
+#crm_form,
+#drcash_form,
+#everad_form,
+#hp_form,
+#kma_form,
+#leadbit_form,
+#leadtrade_form,
+#luckyshop_form,
+#m_leads,
+#monsterleads_form,
+#omni_form,
+#p_hp_form,
+#p_omni_form,
+#profit_form2,
+#pw_hp_form,
+#rocket_form,
+#scpa_pw_ad1_form,
+#scpa_pw_apilead_form,
+#scpa_pw_drcash_form,
+#scpa_pw_hp_form,
+#scpa_pw_leadtrade_form,
+#scpa_pw_tl_form,
+#shakes_form,
+#tl_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.time_remains {
+    font-size: 1.1em;
+    color: red;
+    font-weight: 700
+}
+
+.spin-result-wrapper {
+    display: none;
+    padding: 0 10px;
+    box-sizing: border-box;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    left: 0;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .6);
+    text-align: center
+}
+
+.pop-up-window {
+    position: relative;
+    max-width: 400px;
+    right: 0;
+    left: 0;
+    top: 40%;
+    margin: 0 auto;
+    background: #fff none repeat scroll 0 0;
+    text-align: center;
+    padding: 70px 10px 20px;
+    border-radius: 10px;
+    animation: .7s ease 0s normal none 1 running pop-up-appear
+}
+
+.close-popup {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url(../../../img/elements/forms/form-2/cross.svg);
+    background-size: 100% auto;
+    top: -40px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff;
+    right: -40px;
+    cursor: pointer
+}
+
+
+#order_form input {
+    display: flex
+}
+
+.submit-roulette:active {
+    transform: translateY(2px);
+    box-shadow: none
+}
+
+.submit-roulette,
+input[value="Получить бесплатно"] {
+    text-transform: uppercase;
+    padding: 10px 15px;
+    margin: 15px 0;
+    outline: 0;
+    border: none;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 3px #242120;
+    background: red;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .3s
+}
+
+input[value="Получить бесплатно"]:hover {
+    background: #b00 !important;
+    transition: background .3s
+}
+
+input[value="Получить бесплатно"]:active {
+    transform: translateY(2px);
+    box-shadow: none !important
+}
+
+.input-roulette {
+    padding-left: 5px;
+    height: 42px;
+    margin-bottom: 10px;
+    width: auto !important
+}
+
+input[placeholder="Ваш телефон"],
+input[placeholder="Ваше имя"] {
+    padding-left: 5px;
+    height: 42px;
+    margin-bottom: 10px
+}
+
+.ruletka-p {
+    text-indent: 0;
+    color: #000;
+    text-align: center !important;
+    margin: 15px;
+    line-height: 25px;
+    font-weight: 700
+}
+
+.ruletka-p h2 {
+    font-size: 25px;
+    margin-bottom: 15px
+}
+
+.ruletka-a {
+    color: #1697ce
+}
+
+.spin-wrapper {
+    -webkit-box-shadow: 0 0 10px;
+    box-shadow: 0 0 10px;
+    border: 3px solid red;
+    padding: 20px 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box
+}
+
+#order_form {
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+}
+.input-roulette {
+    display: block;
+    width: 300px !important;
+    max-width: 80%;
+    padding: 6px 10px;
+    border: #888 1px solid;
+    margin-top: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #fff;
+    margin-bottom: 5px;
+}
+
+                          
+                            
+            &lt;!-- JS --&gt;
+             
+   let count = 43;
+const tick2 = () => {
+    1 == --count && clearInterval(start_timer2),
+      $("#timer2").html(count + " ШТ.");
+  },
+  start_timer2 = setInterval(tick2, 5e4);
+var intr,
+  resultWrapper = document.querySelector(".spin-result-wrapper"),
+  time = 600;
+function start_timer() {
+  intr = setInterval(tick, 1e3);
+}
+function tick() {
+  time -= 1;
+  var t = Math.floor(time / 60),
+    e = time - 60 * t;
+  0 == t && 0 == e && clearInterval(intr),
+    (e = e >= 10 ? e : "0" + e),
+    $("#min").html("0" + t),
+    $("#sec").html(e);
+}
+function replace() {
+  (document.getElementById("square").style.display = "none"),
+    (document.getElementById("square2").style.display = "block"),
+    setTimeout(function () {
+      resultWrapper.style.display = "block";
+    }, 1e3),
+    setTimeout(function () {
+      $(".bilet").slideUp(), $(".order_block").slideDown(), start_timer();
+    }, 3500);
+}
+var closePopup = document.querySelector(".close-popup");
+$(".close-popup, .pop-up-button").click(function (t) {
+  t.preventDefault(), $(".spin-result-wrapper").fadeOut();
+  var e = $("#roulette").offset().top;
+  $("body,html").animate({ scrollTop: e }, 800);
+});
+
+                        </pre>
+
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="../../js/forms/form-2.js"></script>
+</body>
+</html>
