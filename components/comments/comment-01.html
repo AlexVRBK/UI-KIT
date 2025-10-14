@@ -18,7 +18,7 @@
       <div class="demo-container">
 
         <header class="demo-header">
-          <a href="index.html" class="demo-back-link">← Назад к каталогу</a>
+          <a href="./" class="demo-back-link">← Назад к каталогу</a>
           <h2>Демонстрация: Comment-01</h2>
         </header>
 
@@ -238,215 +238,1271 @@
         <section class="component-demo">
           <h3>Code: 👇</h3>
           <pre class="code-block">
-           &lt;!-- HTML --&gt; &lt;!вставить после тега &lt;body&gt;&gt;
+           &lt;!-- HTML --&gt;
                                   
-          &lt;a href="#"&gt;
-    &lt;section class="custom-social-proof" style="display: none;"&gt;
-        &lt;div class="custom-notification"&gt;
-            &lt;div class="custom-notification-container"&gt;
-                &lt;div class="custom-notification-image-wrapper"&gt;
-                    &lt;img src="../../img/elements/popups/popup-1/product.png" style="filter: drop-shadow(6px 17px 19px rgba(0, 0, 0, 0.25));width: 75px; padding-left: 7px"&gt;
-                &lt;/div&gt;
-                &lt;div class="custom-notification-content-wrapper"&gt;
-                    &lt;p class="custom-notification-content"&gt;
-                        &lt;svg height="20" class="hide" style="float: right" viewbox="0 0 20 20" width="20"&gt;
-                        &lt;g fill="none" fill-rule="evenodd" stroke="rgba(0, 0, 0, 0.24)" stroke-linecap="round" stroke-width="2"&gt;
-                            &lt;path d="M5 15L15 5M5 5l10 10"&gt;&lt;/path&gt;
-                        &lt;/g&gt;
-                        &lt;/svg&gt;
-                        &lt;span id="notify-1" style="font-size: 12px;"&gt;
-                        &lt;font style="vertical-align: inherit; font-size: 12px;"&gt;
-                        &lt;font style="vertical-align: inherit; font-size: 12px;"&gt;Людмила - Одеса&lt;/font&gt;
-                        &lt;/font&gt; &lt;/span&gt;&lt;br&gt;
-                        &lt;font style="vertical-align: inherit"&gt;
-                            &lt;p style="vertical-align: inherit; font-size: 12px;font-weight: 600;"&gt;
-                                Отримала "Хондробіон"
-                            &lt;/p&gt; 
-                        &lt;/font&gt;
-                        &lt;span style="display: none"&gt;
-                        &lt;font style="vertical-align: inherit; font-size: 12px;"&gt;
-                        &lt;!-- &lt;font style="vertical-align: inherit"&gt;PaVC% N&lt;/font&gt; --&gt;
-                        &lt;/font&gt;
-                        &lt;/span&gt;
-                        &lt;div id="notify-2" style="font-size: 12px;"&gt;&lt;/div&gt;
-                        &lt;small&gt;&lt;span id="notify-3" style="font-size: 10px;"&gt;
-                        &lt;font style="vertical-align: inherit"&gt;
-                        &lt;font style="vertical-align: inherit; font-size: 10px;"&gt;6 секунд тому&lt;/font&gt;
-                        &lt;/font&gt;
-                        &lt;/span&gt;&lt;/small&gt;
-                        
-                    &lt;/p&gt;
-                &lt;/div&gt;
+         &lt;div class="seventh__container"&gt;
+        &lt;div class="title border"&gt;
+          &lt;div class="bigger-title"&gt;&lt;span&gt;Відгуки&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;!-- FORM START --&gt;
+        &lt;form action="#" class="intlTelInput border" id="commentForm" method="post"&gt;
+          &lt;div class="form__item"&gt;
+            &lt;div class="file"&gt;
+              &lt;div class="file__item"&gt;&lt;label class="form__avatar" for="formImage" id="formAvatar"&gt;&lt;/label&gt;
+                &lt;input accept=".jpg, .png, .gif" class="file__input" id="formImage" name="image" type="file"&gt; &lt;label class="file-label" for="formImage"&gt;Завантажити&lt;/label&gt;&lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class="custom-close"&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="form__inputs"&gt;&lt;input id="inputCommentName" placeholder="Ваше Ім'я" type="text" value=""&gt;
+            &lt;textarea cols="20" id="inputCommentText" name="" placeholder="Ваш коментар..." rows="5"&gt;&lt;/textarea&gt;
+            &lt;button id="commentPush" type="submit"&gt;Опублікувати&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+        &lt;!-- FORM END --&gt;
+        &lt;div data-comments="" id="comments"&gt;
+          &lt;div id="commentPushBlock"&gt;&lt;/div&gt;
+          &lt;div class="comment"&gt;&lt;span class="text1 lt21"&gt;Лариса&lt;/span&gt; &lt;span class="text2"&gt;&lt;/span&gt;
+            &lt;div class="text3"&gt;&lt;img alt="img" src="img/ava1.webp"&gt;
+              &lt;div class="comment-wrapper"&gt;
+                &lt;div class="txtCom lt22"&gt;Роками страждала від болю в колінах. Жоден препарат не допомагав до кінця. Але після початку прийому Суглобол, я вперше за довгий час змогла вільно ходити без болю. Це справжнє диво!
+
+                  &lt;img src="img/_com1.webp" alt=""&gt;
+
+                &lt;/div&gt;
+                &lt;div class="comment-action"&gt;
+                  &lt;div class="comment-like"&gt;&lt;a href="#"&gt;&lt;img alt="like icon" src="../../img/elements/comments/comment-1/like.svg"&gt;&lt;/a&gt;&lt;/div&gt;
+                  &lt;div class="comment-date"&gt;
+                    &lt;script type="text/javascript"&gt;d = new Date();
+                    p = new Date(d.getTime() - 0 * 86400000);
+                    monthA = '.01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                    document.write(p.getDate() - 0 + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());&lt;/script&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="comment"&gt;&lt;span class="text1 lt21"&gt;Валентина Кривошапко&lt;/span&gt; &lt;span class="text2"&gt;&lt;/span&gt;
+            &lt;div class="text3"&gt;&lt;img alt="img" src="img/ava2.webp"&gt;
+              &lt;div class="comment-wrapper"&gt;
+                &lt;div class="txtCom lt22"&gt;&lt;a href="#"&gt;Суглобол&lt;/a&gt;
+                  дійсно ефективний! Артрит мучив мене багато років, але після курсу я відчула значне покращення. Вже не боюся активних прогулянок з онуками)
+                &lt;/div&gt;
+
+                &lt;div class="comment-action"&gt;
+                  &lt;div class="comment-like"&gt;&lt;a href="#"&gt;&lt;img alt="like icon" src="../../img/elements/comments/comment-1/like.svg"&gt;&lt;/a&gt;&lt;/div&gt;
+                  &lt;div class="comment-date"&gt;
+                    &lt;script type="text/javascript"&gt;d = new Date();
+                    p = new Date(d.getTime() - 0 * 86400000);
+                    monthA = '.01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                    document.write(p.getDate() - 0 + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());&lt;/script&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="comment"&gt;&lt;span class="text1 lt21"&gt;Олег&lt;/span&gt; &lt;span class="text2"&gt;&lt;/span&gt;
+            &lt;div class="text3"&gt;&lt;img alt="img" src="img/ava3.webp"&gt;
+              &lt;div class="comment-wrapper"&gt;
+                &lt;div class="txtCom lt22"&gt;Скільки я не пробував різних засобів, біль у плечах не відступав. Але цей новий препарат зробив те, що інші не змогли. Рекомендую.
+                  &lt;img src="img/_com2.webp" alt=""&gt;
+                &lt;/div&gt;
+                &lt;div class="comment-action"&gt;
+                  &lt;div class="comment-like"&gt;&lt;a href="#"&gt;&lt;img alt="like icon" src="../../img/elements/comments/comment-1/like.svg"&gt;&lt;/a&gt;&lt;/div&gt;
+                  &lt;div class="comment-date"&gt;
+                    &lt;script type="text/javascript"&gt;d = new Date();
+                    p = new Date(d.getTime() - 1 * 86400000);
+                    monthA = '.01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                    document.write(p.getDate() - 0 + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());&lt;/script&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="comment"&gt;&lt;span class="text1 lt21"&gt;Вікторія Бабенко&lt;/span&gt; &lt;span class="text2"&gt;&lt;/span&gt;
+            &lt;div class="text3"&gt;&lt;img alt="img" src="img/ava4.webp"&gt;
+              &lt;div class="comment-wrapper"&gt;
+                &lt;div class="txtCom lt22"&gt;Я довго сумнівалася, чи варто спробувати щось нове, але цей препарат перевершив усі мої очікування! Після першого тижня прийому припухлість на руках почала спадати а головне – повністю зник біль, який мучив мене роками.
+                &lt;/div&gt;
+                &lt;div class="comment-action"&gt;
+                  &lt;div class="comment-like"&gt;&lt;a href="#"&gt;&lt;img alt="like icon" src="../../img/elements/comments/comment-1/like.svg"&gt;&lt;/a&gt;&lt;/div&gt;
+                  &lt;div class="comment-date"&gt;
+                    &lt;script type="text/javascript"&gt;d = new Date();
+                    p = new Date(d.getTime() - 1 * 86400000);
+                    monthA = '.01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                    document.write(p.getDate() - 0 + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());&lt;/script&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="comment"&gt;&lt;span class="text1 lt21"&gt;Галина Шевчук&lt;/span&gt; &lt;span class="text2"&gt;&lt;/span&gt;
+            &lt;div class="text3"&gt;&lt;img alt="img" src="img/ava5.webp"&gt;
+              &lt;div class="comment-wrapper"&gt;
+                &lt;div class="txtCom lt22"&gt;Велике дякую Фонду Петра Порошенка за все що робиться для людей! Сьогодні замовила препарат, але вже вірю в те, що він допоможе.
+
+                &lt;/div&gt;
+                &lt;div class="comment-action"&gt;
+                  &lt;div class="comment-like"&gt;&lt;a href="#"&gt;&lt;img alt="like icon" src="../../img/elements/comments/comment-1/like.svg"&gt;&lt;/a&gt;&lt;/div&gt;
+                  &lt;div class="comment-date"&gt;
+                    &lt;script type="text/javascript"&gt;d = new Date();
+                    p = new Date(d.getTime() - 1 * 86400000);
+                    monthA = '.01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                    document.write(p.getDate() - 0 + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());&lt;/script&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="comment"&gt;&lt;span class="text1 lt21"&gt;Максим Рудько&lt;/span&gt; &lt;span class="text2"&gt;&lt;/span&gt;
+            &lt;div class="text3"&gt;&lt;img alt="img" src="img/ava6.webp"&gt;
+              &lt;div class="comment-wrapper"&gt;
+                &lt;div class="txtCom lt22"&gt;Ніколи не залишаю відгуків, але про Суглобол не міг не сказати. Я завжди любив свою роботу. Я столяр.. Але з роками біль у руках став настільки сильним, що я почав сумніватися, чи зможу продовжувати. Лікарі розводили руками і мене реально накривав відчай. Аж поки я не почув про Суглобол. Для мене також важливим був натуральний склад, бо зараз усюди одна хімоза яка тільки вбиває. Десь через 2 тижні я зрозумів, що вперше за багато років не відчуваю тягнучого болю в руках. Я знову міг працювати. Не знаю як кому, але для мене це фантастика!!
+
+                &lt;/div&gt;
+                &lt;div class="comment-action"&gt;
+                  &lt;div class="comment-like"&gt;&lt;a href="#"&gt;&lt;img alt="like icon" src="../../img/elements/comments/comment-1/like.svg"&gt;&lt;/a&gt;&lt;/div&gt;
+                  &lt;div class="comment-date"&gt;
+                    &lt;script type="text/javascript"&gt;d = new Date();
+                    p = new Date(d.getTime() - 2 * 86400000);
+                    monthA = '.01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                    document.write(p.getDate() - 0 + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());&lt;/script&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="comment"&gt;
+            &lt;span class="text1 lt21"&gt;Оксана Василенко&lt;/span&gt;
+            &lt;span class="text2"&gt;&lt;/span&gt;
+            &lt;div class="text3"&gt;&lt;img alt="img" src="img/ava7.webp"&gt;
+              &lt;div class="comment-wrapper"&gt;
+                &lt;div class="txtCom lt22"&gt; Суглобол вразив мене як фахівця своєю унікальною формулою, яка не має аналогів на ринку. Як лікар-ревматолог, я дуже задоволена результатами його застосування і впевнена, що він стане відмінним вибором для відновлення суглобів моїх пацієнтів.
+
+
+                &lt;/div&gt;
+                &lt;div class="comment-action"&gt;
+                  &lt;div class="comment-like"&gt;
+                    &lt;a href="#"&gt;
+                      &lt;img src="../../img/elements/comments/comment-1/like.svg" alt="like icon"&gt;
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class="comment-date"&gt;
+                    &lt;script type="text/javascript"&gt;d = new Date();
+                    p = new Date(d.getTime() - 2 * 86400000);
+                    monthA = '.01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                    document.write(p.getDate() - 0 + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());&lt;/script&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="comment"&gt;
+            &lt;span class="text1 lt21"&gt;Валерій&lt;/span&gt;
+            &lt;span class="text2"&gt;&lt;/span&gt;
+            &lt;div class="text3"&gt;&lt;img alt="img" src="img/ava8.webp"&gt;
+              &lt;div class="comment-wrapper"&gt;
+                &lt;div class="txtCom lt22"&gt;Купив Суглобол своєму батьку, бо через постійний біль в колінах йому було дуже важко ходити. Пройшов місяць і вже бігає як молодий – всі в приємному шоці!
+
+
+                &lt;/div&gt;
+                &lt;div class="comment-action"&gt;
+                  &lt;div class="comment-like"&gt;
+                    &lt;a href="#"&gt;
+                      &lt;img src="../../img/elements/comments/comment-1/like.svg" alt="like icon"&gt;
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class="comment-date"&gt;
+                    &lt;script type="text/javascript"&gt;d = new Date();
+                    p = new Date(d.getTime() - 2 * 86400000);
+                    monthA = '.01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                    document.write(p.getDate() - 0 + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());&lt;/script&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="comment"&gt;
+            &lt;span class="text1 lt21"&gt;Ганна Миколаївна&lt;/span&gt;
+            &lt;span class="text2"&gt;&lt;/span&gt;
+            &lt;div class="text3"&gt;&lt;img alt="img" src="img/ava9.webp"&gt;
+              &lt;div class="comment-wrapper"&gt;
+                &lt;div class="txtCom lt22"&gt;Я пенсіонерка і грошей не вистачає на дорогі препарати, які тільки й пропонують в аптеці.. Дякую ЄС за можливість повернутися до нормального життя не за всі гроші світу!
+
+                &lt;/div&gt;
+                &lt;div class="comment-action"&gt;
+                  &lt;div class="comment-like"&gt;
+                    &lt;a href="#"&gt;
+                      &lt;img src="../../img/elements/comments/comment-1/like.svg" alt="like icon"&gt;
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div class="comment-date"&gt;
+                    &lt;script type="text/javascript"&gt;d = new Date();
+                    p = new Date(d.getTime() - 2 * 86400000);
+                    monthA = '.01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                    document.write(p.getDate() - 0 + '.' + monthA[p.getMonth()] + '.' + p.getFullYear());&lt;/script&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
         &lt;/div&gt;
-    &lt;/section&gt;
-&lt;/a&gt;
-                            
-                            
-                            
+        &lt;button class="title border" data-load-comment=""&gt;Завантажити ще...&lt;/button&gt;
+      &lt;/div&gt;
                             
        &lt;!-- CSS --&gt;
                             
             
-      .custom-social-proof {
-          position: fixed;
-          right: 10px;
-          top: 10px;
-          z-index: 4 !important;
-      }
+     
 
-      .custom-social-proof .custom-notification {
-          width: 260px;
-          border: 0;
-          text-align: left;
+picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-          box-sizing: border-box;
-          font-weight: 400;
-          border-radius: 6px;
-          box-shadow: 2px 2px 10px 2px rgba(11, 10, 10, 0.2);
-          background-color: #fff;
-          position: relative;
-          cursor: pointer;
-      }
+b,
+.bold {
+  font-weight: 700;
+}
 
-      .custom-social-proof .custom-notification .custom-notification-container {
-          display: flex !important;
-          align-items: center;
-          height: 90px;
-          background: #cedae582;
-      }
+i,
+.italic {
+  font-style: italic;
+}
 
-      .custom-social-proof
-      .custom-notification
-      .custom-notification-container
-      .custom-notification-image-wrapper
-      img {
-          max-height: 75px;
-          width: 65px;
-          overflow: hidden;
-          border-radius: 6px 0 0 6px;
-          object-fit: cover;
-          vertical-align: middle;
-      }
+.decor {
+  color: #fff000;
+}
 
-      .custom-social-proof
-      .custom-notification
-      .custom-notification-container
-      .custom-notification-content-wrapper {
-          margin: 0;
-          height: 100%;
-          color: gray;
-          padding-left: 10px;
-          padding-right: 10px;
-          border-radius: 0 6px 6px 0;
-          flex: 1;
-          display: flex !important;
-          flex-direction: column;
-          justify-content: center;
-      }
+#comments [href="#toform"] {
+  color: #212a98;
+  font-weight: 700;
+  cursor: pointer;
+}
 
-      .custom-social-proof
-      .custom-notification
-      .custom-notification-container
-      .custom-notification-content-wrapper
-      .custom-notification-content {
-          font-family: inherit !important;
-          margin: 0 !important;
-          padding: 0 !important;
-          font-size: 14px;
-          line-height: 16px;
-      }
+.image img {
+  width: 100%;
+}
 
-      .custom-social-proof
-      .custom-notification
-      .custom-notification-container
-      .custom-notification-content-wrapper
-      .custom-notification-content
-      small {
-          margin-top: 3px !important;
-          display: block !important;
-          font-size: 12px !important;
-          opacity: 0.8;
-      }
+ol.list {
+  list-style: decimal;
+}
 
-      p {
-          font-size: inherit;
-        font-weight: inherit; 
-      }
+ul.list {
+  list-style: disc;
+}
 
-      * {padding: 0px;
-        margin: 0px;
-        border: none;}
-      *,
-      *::before,
-      *::after {box-sizing: border-box;}
-      a, a:link, a:visited  {text-decoration: none;}
-      a:hover  {text-decoration: none;}
-      aside, nav, footer, header, section, main {
-        display: block;}
-      p {
-          font-size: inherit;
-        font-weight: inherit;}
-      img {
-        vertical-align: top;}
-      img, svg {
-        max-width: 100%;
-        height: auto;}
-      address {
-        font-style: normal;}
+ul.list,
+ol.list {
+  list-style-position: inside;
+  display: grid;
+  row-gap: 10px;
+}
+
+.comment {
+  display: grid;
+  margin-bottom: 20px;
+}
+
+.text3 {
+  margin-top: 8px;
+  display: flex;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+}
+
+.text3 > img {
+  flex: 0 0 80px;
+  border-radius: 10px;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #fff000;
+}
+
+#commentForm {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: start;
+  margin-top: 20px;
+  max-width: 800px;
+  margin: 20px 0;
+  padding: 20px 10px;
+  /* border: 1px solid #ccc; */
+}
+
+#commentForm .form__item {
+  /* width: 100%; */
+  color: snow;
+  border-radius: 50%;
+}
+
+#commentForm .form__avatar {
+  position: relative;
+  display: flex;
+  background-color: #fff;
+  background: url("../../../img/elements/comments/comment-1/userpic.webp") no-repeat center center/cover;
+  width: 100%;
+  height: 90px;
+  /* border-radius: 50%; */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#commentForm .form__avatar img {
+  width: 100%;
+  max-width: 100%;
+}
+
+#commentForm .form__avatar::before {
+  position: absolute;
+  content: "Фото";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+}
+
+#commentForm .form__avatar--loaded::before {
+  display: none;
+}
+
+#commentForm label {
+  color: #fff;
+}
+
+#commentForm .file-label {
+  display: inline-block;
+  width: 86%;
+  color: #000;
+  font-size: 12px;
+  padding: 2px 10px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 5px;
+  background: linear-gradient(to bottom, #fff, #ccc);
+}
+
+#inputCommentName {
+  margin-bottom: 10px;
+}
+
+#commentForm input,
+#commentForm textarea {
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+#commentForm input:focus,
+#commentForm textarea:focus {
+  outline: none;
+}
+
+#commentForm .form__inputs {
+  position: relative;
+  width: 100%;
+  margin-right: 50px;
+}
+
+#commentPush {
+  display: inline-block;
+  /*background-color: transparent;*/
+  border: none;
+  background-color: #212a98;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 25px;
+  text-decoration: none;
+  margin: 5px 0px 0px 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#commentPush img {
+  width: 30px;
+}
+
+#commentPush:hover {
+  background-color: #212a98;
+  color: #fff;
+}
+
+.form__label {
+  font-size: 12px;
+}
+
+.file {
+  width: 100%;
+  max-width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.file__item {
+  position: relative;
+}
+
+.file__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.file__button {
+  display: inline-flex;
+  min-height: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: #bf0909;
+  color: whitesmoke;
+  border-radius: 5px;
+  padding: 0px 20px;
+}
+
+.file__preview {
+  display: inline-block;
+  max-width: 100px;
+  padding: 10px 0px 0px 0px;
+}
+
+.file__preview img {
+  max-width: 100%;
+}
+
+.error {
+  outline: 3px solid #a12000;
+}
+
+/*style comment*/
+
+.item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 20px 0;
+}
+
+.component_ava {
+  background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  overflow: hidden;
+  border-radius: 100%;
+  margin: 0 10px 0 0;
+}
+
+.component_info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin: 0 0 5px 0;
+}
+
+.component_info_inner {
+  background-color: #ebedf0;
+  border-radius: 18px;
+  display: inline-block;
+  line-height: 16px;
+  margin-top: 0;
+  min-width: 0;
+  overflow: hidden;
+  padding: 6px 12px 7px 12px;
+}
+
+.component_name {
+  color: #000;
+  font-weight: 600;
+  font-size: 12px;
+  margin: 0 0 3px 3px;
+  text-decoration: none;
+}
+
+.component_licked {
+  position: relative;
+  bottom: 3px;
+  left: 0;
+  display: flex;
+}
+
+.component_body {
+  width: 100%;
+}
+
+.component_voir {
+  color: #000;
+  font-weight: 600;
+  font-size: 12px;
+  margin: 7px 0 0 12px;
+}
+
+.component_reposy {
+  color: #929292;
+  font-weight: 600;
+  font-size: 12px;
+  margin: 6px 0 0 12px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.component_reposy b {
+  font-weight: 100;
+  word-spacing: 0 !important;
+  color: #757575;
+}
+
+.component_img {
+  width: 70%;
+  border-radius: 18px;
+  overflow: hidden;
+  margin: 7px 0 6px 0;
+  height: auto;
+}
+
+.component_img img {
+  width: 100%;
+  display: flex;
+  height: auto;
+  transition: all 3s ease-in;
+}
+
+.component_licked {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px 0 #dadde1;
+  color: #909192;
+  font-size: 11px;
+  font-weight: normal;
+  height: 20px;
+  line-height: 20px;
+  margin-left: -10px;
+  padding-right: 4px;
+  transform: translateY(-6px);
+  z-index: 5;
+}
+
+a {
+   font-weight: 600;
+  text-decoration: none;
+  color: #232323;
+}
+
+.icons {
+  white-space: nowrap;
+  display: flex;
+  margin: 0;
+}
+
+#commentForm .form__inputs {
+  padding: 0 0 0 15px;
+  margin-right: 0;
+  row-gap: 15px;
+}
+
+#commentForm .form__inputs input,
+#commentForm .form__inputs textarea,
+#commentForm .form__inputs button {
+  border-radius: 5px;
+}
+
+#commentForm .form__inputs textarea {
+  color: #000;
+}
+
+#commentForm .form__inputs textarea::-moz-placeholder {
+  opacity: 0.5;
+}
+
+#commentForm .form__inputs textarea::placeholder {
+  opacity: 0.5;
+}
+
+.comment-wrapper {
+  width: 100%;
+  align-self: flex-end;
+  display: grid;
+  row-gap: 10px;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+s .comment-wrapper:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-radius: 10px;
+  background: #fff000;
+}
+
+.comment-wrapper img {
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  pointer-events: none;
+}
+
+.comment-action {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 15px;
+  column-gap: 15px;
+  justify-self: end;
+}
+
+.decor {
+  color: #fff000;
+}
+
+b,
+.bold {
+  font-weight: 700;
+}
+
+.bigger {
+  font-size: 1.3em;
+}
+
+.bigger-title {
+  font-size: 1.5em;
+}
+
+.title {
+  font-family: "Rubik";
+  font-weight: 700;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.title span {
+  color: #212a98;
+}
+
+.name {
+  font-size: 1.2em;
+}
+
+.hero {
+  background-color: #000;
+}
+
+.hero__bg {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__bg img {
+  width: 100%;
+}
+
+.hero__text {
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+section.bg-star {
+  background: url("../img/bg.webp") 0 0/cover no-repeat;
+}
+
+.border {
+  border: 2px solid #fff000;
+  padding: 10px;
+  border-radius: 3px;
+  color: #212a98;
+}
+
+.center {
+  text-align: center;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+[class*=__container] {
+  display: grid;
+  row-gap: 25px;
+}
+
+.text p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.text span {
+  color: #fff000;
+}
+
+.first {
+  margin-top: -120px;
+}
+
+.image {
+  border: 1px solid #fff000;
+  position: relative;
+  border-radius: 3px;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grey-bg {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.grey-bg:before,
+.grey-bg:after {
+  color: #fff000;
+  font-size: 5em;
+  position: absolute;
+  font-family: "Rubik";
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+}
+
+.grey-bg:before {
+  content: "“";
+  top: 0;
+  left: 10px;
+}
+
+.grey-bg:after {
+  content: "”";
+  bottom: -35px;
+  right: 10px;
+}
+
+.offer {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.offer img {
+  max-width: 100%;
+  filter: drop-shadow(0 0 15px #fff000);
+}
+
+.form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form__title {
+  padding-top: 10px;
+  font-style: italic;
+}
+
+.form__inputs {
+  display: grid;
+  row-gap: 25px;
+  padding: 20px;
+}
+
+.form__inputs input {
+  color: #000;
+  border-radius: 5px;
+  padding: 10px 5px;
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+}
+
+.form__inputs input::-moz-placeholder {
+  text-transform: uppercase;
+  opacity: 0.5;
+  font-size: 0.9em;
+}
+
+.form__inputs input::placeholder {
+  text-transform: uppercase;
+  opacity: 0.5;
+  font-size: 0.9em;
+}
+
+.form__inputs input:last-child {
+  text-transform: uppercase;
+}
+
+.form__submit {
+  margin-top: 20px;
+  /* max-width: 70%; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form__submit input {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 5px;
+}
+
+.list {
+  list-style: none !important;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 12px;
+  column-gap: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  font-size: 1.2em;
+}
+
+.list li p {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list li:before {
+  content: "";
+  flex: 0 0 30px;
+  background: #fff000;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.list li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+a[href="#scroll-to-form"] {
+  font-weight: 700;
+  font-size: 1.1em;
+  color: #ffdd00;
+}
+
+.txtCom img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 400px) {
+  .form {
+    max-width: 70%;
+  }
+
+  .form__title {
+    font-size: 1.8em;
+  }
+
+}
+
+@media (min-width: 450px) {
+  .hero__bg {
+    max-width: 350px;
+  }
+
+  .hero__text {
+    bottom: 100px;
+  }
+  .txtCom img {
+    width: 50%;
+  }
+}
+
+@media (min-width: 451px) {
+  .offer {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 769px) {
+  [class*=__container],
+  .header__container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header__body {
+    align-items: center;
+  }
+
+  .header-action__wrapper {
+    flex: 1 1 auto;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    -moz-column-gap: 15px;
+    column-gap: 15px;
+  }
+
+  .header-action li:hover a:after {
+    width: 100%;
+  }
+
+  .header-action li a {
+    display: block;
+    position: relative;
+  }
+
+  .header-action li a:after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #000;
+    transition: all 0.3s ease;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .image_50 {
+    max-width: 50%;
+  }
+
+  .image_60 {
+    max-width: 60%;
+  }
+
+  .image_70 {
+    max-width: 70%;
+  }
+
+  .image_80 {
+    max-width: 80%;
+  }
+
+  .image_90 {
+    max-width: 90%;
+  }
+
+  .image_100 {
+    max-width: 100%;
+  }
+
+  .form {
+    max-width: 40%;
+  }
+
+  .list {
+    justify-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-action {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    background-color: rgba(211, 211, 211, 0.5);
+    background-color: #000;
+    overflow-y: auto;
+  }
+
+  .header-action__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+    padding: 20px 20px 30px 20px;
+    transition: all 0.5s ease;
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  .header-action.active {
+    left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  #commentForm {
+    justify-content: center;
+    padding: 10px;
+  }
+
+  #commentForm .form__avatar::before {
+    font-size: 10px;
+  }
+
+  #commentForm input,
+  #commentForm textarea {
+    border-width: 1px;
+    padding: 10px 45px 10px 15px;
+    font-size: 14px;
+  }
+
+  #commentPush {
+    font-size: 14px;
+  }
+
+  #commentForm .form__inputs {
+    margin: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .offer {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero__text {
+    bottom: 20%;
+  }
+}
+
+@media (max-width: 399px) {
+  .form__title {
+    font-size: 1.3em;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 449px) {
+  .hero__text {
+    bottom: 25%;
+  }
+}
 
                           
                             
             &lt;!-- JS --&gt;
              
-    document.addEventListener("DOMContentLoaded", function() {
-    var recentPur = [
-      ["Васелина – Київ", "3 упаковки", "5 хвилину тому"],
-      ["Галина – Харків", "2 упаковки", "5 хвилину тому"],
-      ["Діна - Полтава", "4 упаковки", "22 хвилину тому"],
-      ["Алевтіна – Київ", "3 упаковки", "23 хвилини тому"],
-      ["Евгенія - Чернігів", "2 упаковки", "24 минуты назад"],
-      ["Серафіма – Одеса", "4 упаковки", "27 хвилин тому"],
-      ["Валентина - Київ", "3 упаковки", "30 хвилин тому"],
-      ["Людмила – Львів", "3 упаковки", "31 хвилину тому"],
-      ["Марія – Харків", "2 упаковки", "33 хвилину тому"],
-      ["Ксенія – Вінниця", "3 упаковки", "36 хвилину тому"],
-      ["Олександра - Суми", "2 упаковки", "45 хвилину тому"],
-      ["Стафанія – Київ", "4 упаковки", "1 хвилину тому"],
-      ["Катерина-Харків", "3 упаковки", "1 хвилину тому"],
-      ["Вікторія – Чернігів", "3 упаковки", "1 хвилину тому"],
-      ["Владеса - Запоріжжя", "4 упаковки", "1 хвилину тому"],
-      ["Любов – Дніпро", "2 упаковки", "1 хвилину тому"]
-    ];
-    let randPur = Math.floor(Math.random() * 10); 
-    let timeRand = Math.round(Math.random() * 29) + 1; 
-    document.getElementById("notify-1").innerHTML = recentPur[randPur][0];
-    document.getElementById("notify-2").innerHTML = recentPur[randPur][1];
-    document.getElementById("notify-3").innerHTML = timeRand + " секунди тому";
-    
-    setInterval(function () {
-        let customSocialProof = document.querySelector(".custom-social-proof");
-        customSocialProof.style.display = (customSocialProof.style.display === "none") ? "block" : "none";
-    
-        if (customSocialProof.style.display === "none") {
-            let randPur = Math.floor(Math.random() * recentPur.length); 
-            document.getElementById("notify-1").innerHTML = recentPur[randPur][0];
-            document.getElementById("notify-2").innerHTML = recentPur[randPur][1];
-            document.getElementById("notify-3").innerHTML = timeRand + " секунди тому";
-        }
-    }, 8000); 
-    
-    document.querySelector(".custom-close").addEventListener("click", function () {
-        document.querySelector(".custom-social-proof").style.display = "none";
-    });
-    
-   
-})
+   let commentParent = document.querySelector(`[data-comments]`);
+let comments = Array.from(commentParent.children).filter(el => el.id !== 'commentPushBlock');
 
-document.querySelector('.hide').addEventListener('click', () => {
-    document.querySelector('.custom-social-proof').style.display = 'none';
-})
+const INITIAL_COMMENTS_COUNT = 4;
+let counter = -1; 
+
+comments.forEach((el) => {
+    el.style.display = "none";
+});
+
+for (let i = 0; i < INITIAL_COMMENTS_COUNT && i < comments.length; i++) {
+    comments[i].style.display = "grid";
+    counter = i;
+}
+
+document
+    .querySelector(`[data-load-comment]`)
+    .addEventListener("click", loadComment);
+
+function loadComment() {
+    if (comments.length - 1 > counter) {
+        counter++;
+        comments[counter].style.display = "grid";
+
+        if (comments.length - 1 === counter) {
+            this.style.pointerEvents = "none";
+        }
+    } else {
+        this.style.pointerEvents = "none";
+    }
+}
+
+
+class Comment {
+    constructor(commentForm, inputCommentName, inputCommentText, formImage, formAvatar, commentPushBlock) {
+        this.commentForm = document.querySelector(commentForm);
+        this.inputCommentName = document.querySelector(inputCommentName);
+        this.inputCommentText = document.querySelector(inputCommentText);
+        this.formImage = document.querySelector(formImage);
+        this.formAvatar = document.querySelector(formAvatar);
+        this.commentPushBlock = document.querySelector(commentPushBlock);
+        this.commArrAll = [];
+        this.formImageUrl = null; 
+        
+        this.formImageChange();
+        this.pushComBlock();
+        this.domOnloader();
+    }
+
+    uploadFile(file) {
+        if (!["image/jpeg", "image/png", "image/gif"].includes(file.type)) {
+            alert("Дозволені лише зображення (JPG, PNG, GIF).");
+            this.formImage.value = ""; 
+            return;
+        }
+        // Перевірка розміру файлу (<1 Мб)
+        if (file.size > 1 * 1024 * 1024) {
+            alert("Розмір файлу не повинен перевищувати 1 МБ.");
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            this.formAvatar.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
+            this.formAvatar.classList.add("form__avatar--loaded");
+            this.formImageUrl = e.target.result; 
+        };
+        reader.onerror = function (e) {
+            alert("Помилка при читанні файлу.");
+        };
+        reader.readAsDataURL(file);
+    }
+
+    formImageChange() {
+        this.formImage.addEventListener("change", () => {
+            if (this.formImage.files.length > 0) {
+                this.uploadFile(this.formImage.files[0]);
+            }
+        });
+    }
+
+    pushComm() {
+        let urlAvatar = "";
+        // Використовуємо завантажений URL, або дефолтний
+        if (this.formImageUrl) {
+            urlAvatar = this.formImageUrl;
+        } else {
+            urlAvatar = "../../img/elements/comments/comment-1/userpic.webp"; // Шлях до дефолтної картинки
+        }
+
+        const d = new Date();
+        const p = new Date(d.getTime() - 0 * 86400000); 
+        const monthA = "01,02,03,04,05,06,07,08,09,10,11,12".split(",");
+        const dateNow = p.getDate() + "." + monthA[p.getMonth()] + "." + p.getFullYear();
+
+        // HTML-шаблон нового коментаря
+        const comment = `&lt;div class="comment"&gt;
+      &lt;span class="text1 lt21"&gt;${this.inputCommentName.value}&lt;/span&gt;
+      &lt;span class="text2"&gt;&lt;/span&gt;
+      &lt;div class="text3"&gt;
+        &lt;img alt="img" src="${urlAvatar}"&gt;
+        &lt;div class="comment-wrapper"&gt;
+          &lt;div class="txtCom lt22"&gt;${this.inputCommentText.value.replace(/\n/g, '&lt;br&gt;')}&lt;/div&gt;
+          &lt;div class="comment-action"&gt;
+            &lt;div class="comment-like"&gt;
+              &lt;a href="#"&gt;
+                &lt;img src="../../img/elements/comments/comment-1/like.svg" alt="like icon"&gt;
+              &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="comment-date"&gt;${dateNow}&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;`;
+        
+        this.commArrAll.unshift(comment); 
+        this.commentPushBlock.innerHTML = this.commArrAll.join(""); 
+        localStorage.setItem("commArr", JSON.stringify(this.commArrAll)); 
+        
+        // Очищення форми
+        this.removeInputClass();
+        this.formAvatar.innerHTML = "";
+        this.formAvatar.classList.remove("form__avatar--loaded");
+        this.formImage.value = ""; 
+        this.formImageUrl = null;
+    }
+
+    removeInputClass() {
+        if (this.inputCommentName) {
+            this.inputCommentName.value = "";
+            this.inputCommentName.classList.remove("error");
+        }
+        this.inputCommentText.value = "";
+        this.inputCommentText.classList.remove("error");
+    }
+
+    pushComBlock() {
+        this.commentForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            
+            let isNameValid = this.inputCommentName ? !!this.inputCommentName.value : true;
+            let isTextValid = !!this.inputCommentText.value;
+
+            if (isNameValid && isTextValid) {
+                return this.pushComm();
+            } else {
+                if (this.inputCommentName && !this.inputCommentName.value) {
+                    this.inputCommentName.classList.add("error");
+                } else if (this.inputCommentName) {
+                    this.inputCommentName.classList.remove("error");
+                }
+                
+                if (!this.inputCommentText.value) {
+                    this.inputCommentText.classList.add("error");
+                } else {
+                     this.inputCommentText.classList.remove("error");
+                }
+            }
+        });
+    }
+
+    domOnloader() {
+        document.addEventListener("DOMContentLoaded", () => {
+            let commArr = localStorage.getItem("commArr");
+            if (commArr) {
+                this.commArrAll = JSON.parse(commArr);
+                this.commentPushBlock.innerHTML = this.commArrAll.join("");
+            }
+        });
+    }
+}
+
+let comment = new Comment(
+    "#commentForm",
+    "#inputCommentName",
+    "#inputCommentText",
+    "#formImage",
+    "#formAvatar",
+    "#commentPushBlock"
+);
                         </pre>
 
         </section>
