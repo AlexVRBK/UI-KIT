@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Kit - Form-05</title>
+
+    <link rel="stylesheet" href="../../css/elements/elements.css">
+    <link rel="stylesheet" href="../../css/elements/forms/form-5.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="demo-page-layout">
+        <main class="demo-content-wrapper">
+            <div class="demo-container">
+
+                <header class="demo-header">
+                    <a href="./" class="demo-back-link">← Назад к каталогу</a>
+                    <h2>Демонстрация: Form-05</h2>
+                </header>
+
+                <center>
+                    <script>
+                        var sale1 = '80%';
+                        var sale2 = '30%';
+                        var sale3 = '15%';
+                    </script>
+
+                    <div id="orderForm"></div>
+
+                    <div class="ass__container">
+                        <h2 class="ass__title">Skini gaćice – pronađi popust.</h2>
+                        <div class="ass__container--body">
+                            <div class="ass" id="ass1" onclick="showDiscount(this.id)">
+                                <img alt="" class="ass__img underpants__animation"
+                                    src="/img/elements/forms/form-5/underpants1.png" />
+                                <span class="ass__discount">50%</span>
+                            </div>
+
+                            <div class="ass" id="ass2" onclick="showDiscount(this.id)">
+                                <img alt="" class="ass__img underpants__animation"
+                                    src="/img/elements/forms/form-5/underpants2.png" />
+                                <span class="ass__discount">50%</span>
+                            </div>
+
+                            <div class="ass" id="ass3" onclick="showDiscount(this.id)">
+                                <img alt="" class="ass__img underpants__animation"
+                                    src="/img/elements/forms/form-5/underpants3.png" />
+                                <span class="ass__discount">50%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order_block" style="display: none; text-align: center !important">
+                        <h3 style="font: 700 18px Arial !important; background: 0 0">
+                            Sve što trebate učiniti — unijeti ime i broj telefona!<br />
+                            Požurite! Ostalo vam je još vremena:<br />
+                            <span class="time_remains" id="min"
+                                style="font-size: 1.1em; color: red; font-weight: 700">10</span>:
+                            <span class="time_remains" id="sec"
+                                style="font-size: 1.1em; color: red; font-weight: 700">00</span>
+                        </h3>
+
+                        <p class="form__price-block">
+                            <span class="price price--old pold-price">78€</span>
+                            <span class="price price--new pnew-price">19,50€</span>
+                        </p>
+
+                        <form action="api/send.php" autocomplete="off" method="post" style="
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+      ">
+                            <input autocomplete="name" class="input-roulette" id="input-name" maxlength="50"
+                                name="fullName" placeholder="Vaše ime" required type="text" />
+
+                            <label>Unesite svoj broj telefona:</label>
+
+
+
+                            <input autocomplete="tel" class="input-roulette" id="input-phone" name="phoneNumber"
+                                placeholder="Vaš broj telefona" required type="tel" />
+
+                            <input class="submit-roulette" style="
+          text-transform: uppercase;
+          padding: 10px 15px;
+          margin: 15px 0;
+          outline: 0;
+          border: none;
+          margin-top: 5px;
+          border-radius: 5px;
+          box-shadow: 0 4px 3px #242120;
+          background: red;
+          color: #fff;
+          font-weight: 700;
+          transition: background 0.3s;
+        " type="submit" value="DOBITI S POPUSTOM" />
+
+                            <input type="hidden" name="country" value="PL" />
+                            <input type="hidden" name="language" value="pl" />
+                            <input type="hidden" name="offer_id" value="{offer_id}" />
+                            <input type="hidden" name="subid" value="{subid}" />
+                            <input type="hidden" name="offer_title" value="Oculax" />
+                            <input type="hidden" name="niche" value="vision" />
+                        </form>
+                    </div>
+
+                    <div class="spin-result-wrapper">
+                        <div class="pop-up-window">
+                            <div class="close-popup"></div>
+                            <p class="ruletka-p pop-up-text">
+                                Čestitamo, možete naručiti proizvod s 80% popusta.
+                                <span class="danger-text"></span><br /><br />
+                            </p>
+                            <a class="pop-up-button" href="#roulette">OK</a>
+                        </div>
+                    </div>
+                </center>
+
+
+
+
+
+            <section class="component-demo">
+                    <h3>Code: 👇</h3>
+                    <pre class="code-block">
+                &lt;!-- HTML --&gt;
+                                        
+                 &lt;center&gt;
+                &lt;script&gt;
+                    var sale1 = '80%';
+                    var sale2 = '30%';
+                    var sale3 = '15%';
+                &lt;/script&gt;
+
+                &lt;div id="orderForm"&gt;&lt;/div&gt;
+
+                &lt;div class="ass__container"&gt;
+                    &lt;h2 class="ass__title"&gt;Skini gaćice – pronađi popust.&lt;/h2&gt;
+                    &lt;div class="ass__container--body"&gt;
+                        &lt;div class="ass" id="ass1" onclick="showDiscount(this.id)"&gt;
+                            &lt;img alt="" class="ass__img underpants__animation"
+                                src="/img/elements/forms/form-5/underpants1.png" /&gt;
+                            &lt;span class="ass__discount"&gt;50%&lt;/span&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="ass" id="ass2" onclick="showDiscount(this.id)"&gt;
+                            &lt;img alt="" class="ass__img underpants__animation"
+                                src="/img/elements/forms/form-5/underpants2.png" /&gt;
+                            &lt;span class="ass__discount"&gt;50%&lt;/span&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="ass" id="ass3" onclick="showDiscount(this.id)"&gt;
+                            &lt;img alt="" class="ass__img underpants__animation"
+                                src="/img/elements/forms/form-5/underpants3.png" /&gt;
+                            &lt;span class="ass__discount"&gt;50%&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="order_block" style="display: none; text-align: center !important"&gt;
+                    &lt;h3 style="font: 700 18px Arial !important; background: 0 0"&gt;
+                        Sve što trebate učiniti — unijeti ime i broj telefona!&lt;br /&gt;
+                        Požurite! Ostalo vam je još vremena:&lt;br /&gt;
+                        &lt;span class="time_remains" id="min"
+                            style="font-size: 1.1em; color: red; font-weight: 700"&gt;10&lt;/span&gt;:
+                        &lt;span class="time_remains" id="sec"
+                            style="font-size: 1.1em; color: red; font-weight: 700"&gt;00&lt;/span&gt;
+                    &lt;/h3&gt;
+
+                    &lt;p class="form__price-block"&gt;
+                        &lt;span class="price price--old pold-price"&gt;78€&lt;/span&gt;
+                        &lt;span class="price price--new pnew-price"&gt;19,50€&lt;/span&gt;
+                    &lt;/p&gt;
+
+                    &lt;form action="api/send.php" autocomplete="off" method="post" style="
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        align-items: center;
+                    "&gt;
+                        &lt;input autocomplete="name" class="input-roulette" id="input-name" maxlength="50"
+                            name="fullName" placeholder="Vaše ime" required type="text" /&gt;
+
+                        &lt;label&gt;Unesite svoj broj telefona:&lt;/label&gt;
+
+                        &lt;input autocomplete="tel" class="input-roulette" id="input-phone" name="phoneNumber"
+                            placeholder="Vaš broj telefona" required type="tel" /&gt;
+
+                        &lt;input class="submit-roulette" style="
+                            text-transform: uppercase;
+                            padding: 10px 15px;
+                            margin: 15px 0;
+                            outline: 0;
+                            border: none;
+                            margin-top: 5px;
+                            border-radius: 5px;
+                            box-shadow: 0 4px 3px #242120;
+                            background: red;
+                            color: #fff;
+                            font-weight: 700;
+                            transition: background 0.3s;
+                        " type="submit" value="DOBITI S POPUSTOM" /&gt;
+
+                        &lt;input type="hidden" name="country" value="PL" /&gt;
+                        &lt;input type="hidden" name="language" value="pl" /&gt;
+                        &lt;input type="hidden" name="offer_id" value="{offer_id}" /&gt;
+                        &lt;input type="hidden" name="subid" value="{subid}" /&gt;
+                        &lt;input type="hidden" name="offer_title" value="Oculax" /&gt;
+                        &lt;input type="hidden" name="niche" value="vision" /&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+
+                &lt;div class="spin-result-wrapper"&gt;
+                    &lt;div class="pop-up-window"&gt;
+                        &lt;div class="close-popup"&gt;&lt;/div&gt;
+                        &lt;p class="ruletka-p pop-up-text"&gt;
+                            Čestitamo, možete naručiti proizvod s 80% popusta.
+                            &lt;span class="danger-text"&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+                        &lt;/p&gt;
+                        &lt;a class="pop-up-button" href="#roulette"&gt;OK&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/center&gt;
+               
+                                        
+                &lt;!-- CSS --&gt;
+                       .btn-link {
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                    }
+
+                    .ass__container {
+                        width: 100%;
+                        max-width: 670px;
+                        border: 3px solid #B10100;
+                        border-radius: 20px;
+                        background: url(/img/elements/forms/form-5/ass_bg.png);
+                        background-size: cover;
+                        box-sizing: border-box;
+                    }
+
+                    .ass__title {
+                        width: 100%;
+                        margin: 0;
+                        margin-top: 20px;
+                        background: #B10100;
+                        padding: 20px;
+                        color: #fff;
+                        font-size: 26px !important;
+                        line-height: 30px !important;
+                        box-sizing: border-box;
+                    }
+
+                    .ass__container--body {
+                        padding: 50px 15px 100px;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    .ass {
+                        display: flex;
+                        justify-content: center;
+                        width: 32%;
+                        height: auto;
+                        background: url(/img/elements/forms/form-5/body.png);
+                        position: relative;
+
+                        box-sizing: border-box;
+                        background-size: 100% 100%;
+                        padding: 15% 10%;
+                    }
+
+                    .ass:hover {
+                        cursor: pointer;
+                    }
+
+                    .ass__img {
+                        position: absolute;
+                        top: 60px;
+                        left: 5px;
+                        height: 55%;
+                        width: 95%;
+                        z-index: 2;
+                        transition: 1s;
+                    }
+
+                    #ass1 .ass__img {
+                        top: 70px;
+                        height: 50%;
+                        width: 90%;
+                        left: 10px;
+                    }
+
+                    .ass__discount {
+                        color: #000;
+                        background: rgba(255, 255, 255, 0.7);
+                        opacity: 0;
+                        border-radius: 10px;
+                        padding: 15px 20px;
+                        box-sizing: border-box;
+                        font-size: 32px !important;
+                        line-height: 36px !important;
+                        transition: 1s;
+                    }
+
+                    .win {
+                        background: rgba(255, 255, 255, 0.9);
+                        border: 2px solid #B10100;
+                        border-radius: 10px;
+                    }
+
+                    .underpants__animation {
+                        animation: underpants 1s infinite linear;
+                        -webkit-animation: underpants 1s infinite linear;
+                    }
+
+                    @keyframes underpants {
+                        0% {
+                            transform: translate(1px, 1px) rotate(0deg);
+                        }
+
+                        10% {
+                            transform: translate(-1px, -2px) rotate(-1deg);
+                        }
+
+                        20% {
+                            transform: translate(-3px, 0px) rotate(1deg);
+                        }
+
+                        30% {
+                            transform: translate(3px, 2px) rotate(0deg);
+                        }
+
+                        40% {
+                            transform: translate(1px, -1px) rotate(1deg);
+                        }
+
+                        50% {
+                            transform: translate(-1px, 2px) rotate(-1deg);
+                        }
+
+                        60% {
+                            transform: translate(-3px, 1px) rotate(0deg);
+                        }
+
+                        70% {
+                            transform: translate(3px, 1px) rotate(-1deg);
+                        }
+
+                        80% {
+                            transform: translate(-1px, -1px) rotate(1deg);
+                        }
+
+                        90% {
+                            transform: translate(1px, 2px) rotate(0deg);
+                        }
+
+                        100% {
+                            transform: translate(1px, -2px) rotate(-1deg);
+                        }
+                    }
+
+                    @-webkit-keyframes underpants {
+                        0% {
+                            transform: translate(1px, 1px) rotate(0deg);
+                        }
+
+                        10% {
+                            transform: translate(-1px, -2px) rotate(-1deg);
+                        }
+
+                        20% {
+                            transform: translate(-3px, 0px) rotate(1deg);
+                        }
+
+                        30% {
+                            transform: translate(3px, 2px) rotate(0deg);
+                        }
+
+                        40% {
+                            transform: translate(1px, -1px) rotate(1deg);
+                        }
+
+                        50% {
+                            transform: translate(-1px, 2px) rotate(-1deg);
+                        }
+
+                        60% {
+                            transform: translate(-3px, 1px) rotate(0deg);
+                        }
+
+                        70% {
+                            transform: translate(3px, 1px) rotate(-1deg);
+                        }
+
+                        80% {
+                            transform: translate(-1px, -1px) rotate(1deg);
+                        }
+
+                        90% {
+                            transform: translate(1px, 2px) rotate(0deg);
+                        }
+
+                        100% {
+                            transform: translate(1px, -2px) rotate(-1deg);
+                        }
+                    }
+
+                    @media (max-width: 550px) {
+                        .ass__container--body {
+                            flex-direction: row;
+                            align-items: center;
+                            gap: 10px;
+                        }
+
+                        .ass {
+                            width: 32%;
+                            padding: 25% 0%;
+                        }
+
+                        .ass__img {
+                            top: 50px;
+                            left: 10px;
+                            height: 55%;
+                            width: 90%;
+
+                        }
+
+                        #ass1 .ass__img {
+                            width: 87%;
+                            top: 45px;
+                            height: 50%;
+                            left: 13px;
+                        }
+
+                        #ass3 .ass__img {
+                            width: 95%;
+                            left: 5px;
+                        }
+                    }
+
+                    @media (max-width: 480px) {
+                        .ass__img {
+                            left: 5px;
+                            top: 35px;
+                        }
+
+                        #ass1 .ass__img {
+                            left: 7px;
+                            top: 35px;
+                        }
+                    }
+
+                    @media (max-width: 420px) {
+                        .ass {
+                            padding: 8% 0% !important;
+                        }
+
+                        .ass__img {
+                            left: 5px;
+                            width: 95%;
+                            top: 30px;
+                            height: 50%;
+                        }
+
+                        #ass1 .ass__img {
+                            top: 30px;
+                            left: 5px;
+                        }
+                    }
+
+                    @media (max-width: 350px) {
+                        .ass {
+                            padding: 6% 0% !important;
+                        }
+
+                        .ass__img,
+                        #ass1 .ass__img {
+                            top: 27px;
+                        }
+                    }
+
+                    .input-roulette {
+                        padding-left: 5px;
+                        height: 42px;
+                        margin-bottom: 10px;
+                        width: 250px !important;
+                        border: 1px solid rgba(4, 15, 29, .81)
+                    }
+
+                    input[placeholder="Ваш телефон"],
+                    input[placeholder="Ваше имя"] {
+                        padding-left: 5px;
+                        height: 42px;
+                        margin-bottom: 10px
+                    }
+
+
+                    .close-popup {
+                        position: absolute;
+                        width: 30px;
+                        height: 30px;
+                        background-image: url("2rwth16tg6r8h7j1vf5x0srpa.svg");
+                        background-size: 100%;
+                        top: -40px;
+                        border-radius: 50%;
+                        -webkit-box-shadow: 0 0 10px #fff;
+                        box-shadow: 0 0 10px #fff;
+                        right: -40px;
+                        cursor: pointer
+                    }
+
+                    .pop-up-heading {
+                        font-size: 40px;
+                        margin-bottom: 20px
+                    }
+
+                    .pop-up-text {
+                        margin-bottom: 25px;
+                        font-size: 24px;
+                        line-height: 30px;
+                        text-align: center !important
+                    }
+
+                    .pop-up-button {
+                        text-transform: uppercase;
+                        text-decoration: none !important;
+                        padding: 10px 20%;
+                        font-size: 20px;
+                        border-radius: 5px;
+                        background-color: #71c341;
+                        color: #fff !important;
+                        border: medium;
+                        cursor: pointer;
+                        outline: medium
+                    }
+
+                    .pop-up-window::before {
+                        content: "";
+                        position: absolute;
+                        width: 110px;
+                        height: 110px;
+                        top: -55px;
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                        background-color: #71c341;
+                        border-radius: 50%;
+                        animation: .5s ease .6s normal backwards 1 running pop-up-appear-before
+                    }
+
+                    .pop-up-window::after {
+                        content: "";
+                        position: absolute;
+                        width: 50px;
+                        height: 20px;
+                        top: -20px;
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                        border-width: medium medium 4px 4px;
+                        border-style: none none solid solid;
+                        border-color: currentcolor currentcolor #fff #fff;
+                        -moz-border-top-colors: none;
+                        -moz-border-right-colors: none;
+                        -moz-border-bottom-colors: none;
+                        -moz-border-left-colors: none;
+                        border-image: none;
+                        transform: rotate(-45deg);
+                        transition: opacity 1s ease 0s;
+                        animation: .5s ease .6s normal backwards 1 running pop-up-appear-after
+                    }
+
+                    .pop-up-button:hover {
+                        color: #fff !important;
+                        text-decoration: none !important
+                    }
+
+                    .pop-up-layer-show {
+                        display: block
+                    }
+
+                    .pop-up-window {
+                        position: relative;
+                        max-width: 400px;
+                        right: 0;
+                        left: 0;
+                        top: 40%;
+                        margin: 0 auto;
+                        background: #fff none repeat scroll 0 0;
+                        text-align: center;
+                        padding: 10px;
+                        padding-top: 70px;
+                        padding-bottom: 20px;
+                        border-radius: 10px;
+                        animation: .7s ease 0s normal none 1 running pop-up-appear
+                    }
+
+                    @media all and (max-width: 520px) {
+                        .wheel {
+                            width: 280px !important
+                        }
+
+                        .cursor-text {
+                            line-height: 45px !important;
+                            font-size: 12px !important
+                        }
+
+                        .close-popup {
+                            right: 0
+                        }
+                    }
+
+                    .spin-result-wrapper {
+                        display: none;
+                        padding: 0 10px;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        width: 100%;
+                        top: 0;
+                        z-index: 999;
+                        left: 0;
+                        height: 100%;
+                        position: fixed;
+                        background-color: rgba(0, 0, 0, .6);
+                        text-align: center
+                    }
+
+                    .price--old {
+                text-decoration: line-through;
+                }
+
+                .price--new {
+                color: red;
+                font-size: 30px;
+                }
+
+                .price {
+                display: inline-block;
+                width: 20%;
+                text-align: center;
+                font-size: 25px;
+                vertical-align: bottom;
+                }
+
+                 &lt;!-- JS --&gt;
+
+                var ass1 = document.querySelector("#ass1 .ass__discount");
+                var ass2 = document.querySelector("#ass2 .ass__discount");
+                var ass3 = document.querySelector("#ass3 .ass__discount");
+
+                function showDiscount(assElem) {
+                var images = document.querySelectorAll(".ass__img");
+                var discounts = document.querySelectorAll(".ass__discount");
+                for (var i = 0; i < 3; i++) {
+                    images[i].classList.remove("underpants__animation");
+                    images[i].style.top = "80%";
+                    discounts[i].style.opacity = "1";
+                }
+                if (assElem === "ass1") {
+                    ass1.classList.add("win");
+                    ass1.innerHTML = typeof sale1 !== "undefined" ? sale1 : "50%";
+                    ass2.innerHTML = typeof sale2 !== "undefined" ? sale2 : "30%";
+                    ass3.innerHTML = typeof sale3 !== "undefined" ? sale3 : "20%";
+                } else if (assElem === "ass2") {
+                    ass2.classList.add("win");
+                    ass1.innerHTML = typeof sale3 !== "undefined" ? sale3 : "20%";
+                    ass2.innerHTML = typeof sale1 !== "undefined" ? sale1 : "50%";
+                    ass3.innerHTML = typeof sale2 !== "undefined" ? sale2 : "30%";
+                } else if (assElem === "ass3") {
+                    ass3.classList.add("win");
+                    ass1.innerHTML = typeof sale2 !== "undefined" ? sale2 : "30%";
+                    ass2.innerHTML = typeof sale3 !== "undefined" ? sale3 : "20%";
+                    ass3.innerHTML = typeof sale1 !== "undefined" ? sale1 : "50%";
+                }
+
+                showResultWindow();
+                showForm();
+                }
+
+                function showResultWindow() {
+                setTimeout(function () {
+                    $(".spin-result-wrapper").css("display", "block");
+                }, 2000);
+                }
+
+                function showForm() {
+                setTimeout(function () {
+                    $(".ass__container").slideUp();
+                    $(".order_block").slideDown();
+                    start_timer();
+                }, 4000);
+                }
+
+                var closePopup = document.querySelector(".close-popup");
+                $(".close-popup, .pop-up-button").click(function (e) {
+                e.preventDefault();
+                $(".spin-result-wrapper").fadeOut();
+
+                var el = $("#roulette");
+                if (el.length === 0) {
+                    el = $("#order_form");
+                }
+
+                if (el.length !== 0) {
+                    var top = el.offset().top;
+                    $("body,html").animate({ scrollTop: top }, 800);
+                }
+                });
+
+                var time = 600;
+                var intr;
+
+                function start_timer() {
+                intr = setInterval(tick, 1000);
+                }
+
+                function tick() {
+                time = time - 1;
+                var mins = Math.floor(time / 60);
+                var secs = time - mins * 60;
+                if (mins == 0 && secs == 0) {
+                    clearInterval(intr);
+                }
+                secs = secs >= 10 ? secs : "0" + secs;
+                $("#min").html("0" + mins);
+                $("#sec").html(secs);
+                }
+
+
+
+                        </pre>
+
+            </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="../../js/forms/form-5.js"></script>
+
+</body>
+
+</html>
