@@ -1,0 +1,189 @@
+.fixed-btn75839 {
+  border: none;
+  position: fixed;
+  top: 25%;
+  right: -10px;
+  z-index: 1000;
+  width: 70px;
+  height: 60px;
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+  background: url("../../../img/elements/back-call/back-call-1/phone-icon.png"),
+    #019541;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  box-shadow: -3px 5px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease, right 0.2s ease;
+}
+
+.fixed-btn75839:hover {
+  transform: translateX(-5px);
+}
+
+@media screen and (min-width: 768px) {
+  .fixed-btn75839 {
+    right: -15px;
+    width: 95px;
+    height: 70px;
+    background-size: 60%;
+  }
+
+  .fixed-btn75839:hover {
+    transform: translateX(-15px);
+  }
+}
+
+.backdrop59783 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1002;
+  background-color: rgba(1, 31, 74, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.is-hidden59783 {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.popup34982 {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+  padding: 30px 20px;
+  border: 3px solid #013f5f;
+  transform: translateY(0);
+  transition: transform 0.3s ease-out;
+}
+
+.popup-content59783 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-title23748 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #013f5f;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .popup-title23748 {
+    font-size: 34px;
+  }
+}
+
+.form59783 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-field84922 {
+  width: 100% !important; 
+  margin-bottom: 20px !important; 
+}
+
+.popup-input34982 {
+  width: 92% !important; 
+  padding: 12px 18px !important;
+  border-radius: 30px !important;
+  background-color: #f9f9f9 !important;
+  color: #013f5f !important;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important; 
+}
+
+.popup-input34982:focus {
+  border-color: #ff6b6b !important; 
+  box-shadow: 0 0 5px rgba(255, 107, 107, 0.5) !important;
+}
+
+.popup-label34982 {
+  font-size: 14px !important;
+  margin-bottom: 8px !important;
+  color: #013f5f !important;
+  display: block !important;
+  font-weight: 500 !important; 
+  transition: color 0.3s ease !important; 
+}
+
+.popup-input34982::placeholder {
+  color: #a3a3a3 !important; 
+}
+
+.popup-input34982:focus {
+  border-color: #ff6b6b;
+}
+
+.form-btn73829 {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(
+    to right,
+    #e04242,
+    #ff6b6b
+  ); 
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease; 
+}
+
+.form-btn73829:hover {
+  background: linear-gradient(to left, #e04242, #ff6b6b);
+  border-color: #ff4b4b;
+  transform: scale(1.02);
+}
+
+.close-popup-btn34982 {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: url("../../../img/elements/back-call/back-call-1/close.png")
+      no-repeat center,
+    rgb(0, 0, 0);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.product-image {
+  max-width: 100px;
+  margin-bottom: 15px;
+}
+
+.product-price {
+  font-size: 20px;
+  color: #013f5f;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 660px) {
+  .popup34982 {
+    margin: 0px 10px;
+  }
+}
