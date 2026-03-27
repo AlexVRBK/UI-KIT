@@ -47,7 +47,7 @@ body {
     height: 80px;
     object-fit: cover; 
     border-radius: 50%; 
-    border: 2px solid #005bbd;
+    border: 2px solid rgb(211, 136, 166);
     margin-right: 10px;
 }
 
@@ -75,7 +75,7 @@ body {
 }
 
 .sidebar__link--active {
-    background-color: #005bbd; 
+    background-color: rgb(211, 136, 166); 
     color: white;
     font-weight: bold;
 }

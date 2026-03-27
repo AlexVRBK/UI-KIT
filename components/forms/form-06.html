@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Kit - Form-06</title>
+
+    <link rel="stylesheet" href="../../css/elements/elements.css">
+    <link rel="stylesheet" href="../../css/elements/forms/form-6.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="demo-page-layout">
+        <main class="demo-content-wrapper">
+            <div class="demo-container">
+
+                <header class="demo-header">
+                    <a href="./" class="demo-back-link">← Назад к каталогу</a>
+                    <h2>Демонстрация: Form-06</h2>
+                </header>
+
+                <center>
+                    <div id="form" class="shariki-form-container js-enabled">
+                        <p class="ctr">
+                            Pentru a comanda DiaFlex Forte, alegeți unul din cei trei
+                            baloane. În fiecare balon se ascunde o reducere la DiaFlex Forte: 25%, 35%
+                            sau 50%. În funcție de reducerea care vă va cădea, veți putea comanda
+                            DiaFlex Forte la acel preț. Aveți doar 1 încercare.
+                        </p>
+                        <div class="shariki__wrapper">
+                            <div class="shariki__title"></div>
+                            <div class="shariki__container">
+                                <div class="box__shariki">
+                                    <div class="hi">
+                                        <p id="shariki__sales2" class="shariki__sales"></p>
+                                    </div>
+                                    <div id="shariki__2" class="shariki"></div>
+                                </div>
+                                <div class="box__shariki">
+                                    <div class="hi">
+                                        <p id="shariki__sales1" class="shariki__sales"></p>
+                                    </div>
+                                    <div id="shariki__1" class="shariki"></div>
+                                </div>
+                                <div class="box__shariki">
+                                    <div class="hi">
+                                        <p id="shariki__sales3" class="shariki__sales"></p>
+                                    </div>
+                                    <div id="shariki__3" class="shariki"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wheel-order-section">
+                            <div class="form-header">
+                                <p class="green-text">
+                                    Pentru dvs. a fost rezervat DiaFlex Forte. Aveți 3
+                                    minute pentru a lăsa o cerere.
+                                </p>
+                                <p class="green-text">
+                                    Costul preparatului pentru dvs. va fi -- 159 RON
+                                    în loc de <del>318 RON</del>
+                                </p>
+                            </div>
+                            <div class="product-section">
+                                <figure class="Figure product">
+                                    <img src="../../img/elements/forms/form-6/product.webp" class="prod_img">
+                                    <div class="priceс">
+                                        <span class="discountс">Reducerea dvs. personală -- 50%!</span>
+                                        <s><span class="js_old_price price_old">318 RON</span></s>
+                                        <b class="new_price js_new_price price_main">159 RON</b>
+                                    </div>
+                                </figure>
+                            </div>
+                            <div class="form-body">
+                                <div class="deadline-text">
+                                    <p>Pentru obținere indicați numele și numărul de telefon.</p>
+                                    <p>A mai rămas timp:</p>
+                                    <div class="timer">
+                                        <span class="time-remains" id="wheel-min">10</span> :
+                                        <span class="time-remains" id="wheel-sec">00</span>
+                                    </div>
+                                </div>
+                                <form action="api/send.php" autocomplete="off" method="post">
+                                    <div class="form-inputs">
+                                        <input type="text" name="fullName" maxlength="30"
+                                            placeholder="Introduceți Nume" required="required" value="">
+                                        <input type="tel" name="phoneNumber"
+                                            placeholder="Introduceți Număr de telefon"
+                                            required="required" value="">
+                                    </div>
+                                    <button class="submit-button" type="submit">Trimite</button>
+                                    <input type="hidden" name="country" value="PL">
+                                    <input type="hidden" name="language" value="pl">
+                                    <input type="hidden" name="offer_id" value="{offer_id}">
+                                    <input type="hidden" name="subid" value="{subid}">
+                                    <input type="hidden" name="offer_title" value="DiaFlex Forte">
+                                    <input type="hidden" name="niche" value="vision">
+                                </form>
+                                <p class="footnote">
+                                    *Dacă nu completați formularul până la ora
+                                    indicată, locul dumneavoastră va fi atribuit altei persoane,
+                                    deoarece medicamentul va fi în lipsă.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="spin-result-wrapper default_spin-result-wrapper">
+                            <div class="pop-up-window">
+                                <div class="close-popup"></div>
+                                <span class="pop-up-heading">Felicitări!</span>
+                                <p class="ruletka-p pop-up-text">
+                                    Puteți comanda DiaFlex Forte cu o reducere de 50%!
+                                </p>
+                                <a class="pop-up-button" data-toggle="scroll" href="">ОК</a>
+                            </div>
+                        </div>
+                    </div>
+                </center>
+
+                <section class="component-demo">
+                    <h3>Code: 👇</h3>
+                    <pre class="code-block">
+                &lt;!-- HTML --&gt;
+                                        
+                 &lt;center&gt;
+                &lt;div id="form" class="shariki-form-container js-enabled"&gt;
+    &lt;p class="ctr"&gt; Pentru a comanda DiaFlex Forte, alegeți unul din cei trei
+        baloane. În fiecare balon se ascunde o reducere la DiaFlex Forte: 25%, 35%
+        sau 50%. În funcție de reducerea care vă va cădea, veți putea comanda
+        DiaFlex Forte la acel preț. Aveți doar 1 încercare. &lt;/p&gt;
+    &lt;div class="shariki__wrapper"&gt;
+        &lt;div class="shariki__title"&gt;&lt;/div&gt;
+        &lt;div class="shariki__container"&gt;
+            &lt;div class="box__shariki"&gt;
+                &lt;div class="hi"&gt;
+                    &lt;p id="shariki__sales2" class="shariki__sales "&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div id="shariki__2" class="shariki"&gt; &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="box__shariki"&gt;
+                &lt;div class="hi"&gt;
+                    &lt;p id="shariki__sales1" class="shariki__sales "&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div id="shariki__1" class="shariki"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="box__shariki"&gt;
+                &lt;div class="hi"&gt;
+                    &lt;p id="shariki__sales3" class="shariki__sales "&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div id="shariki__3" class="shariki"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="wheel-order-section"&gt;
+        &lt;div class="form-header"&gt;
+            &lt;p class="green-text"&gt;Pentru dvs. a fost rezervat DiaFlex Forte. Aveți 3
+                minute pentru a lăsa o cerere.&lt;/p&gt;
+            &lt;p class="green-text"&gt;Costul preparatului pentru dvs. va fi -- 159 RON
+                în loc de &lt;del&gt;318 RON&lt;/del&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="product-section"&gt;
+            &lt;figure class="Figure product"&gt; &lt;img src="../../img/elements/forms/form-6/product.webp"
+                    class="prod_img"&gt;
+                &lt;div class="priceс"&gt; &lt;span class="discountс"&gt;Reducerea dvs.
+                        personală -- 50%!&lt;/span&gt; &lt;s&gt;&lt;span class="js_old_price price_old"&gt;318
+                            RON&lt;/span&gt;&lt;/s&gt; &lt;b class="new_price js_new_price price_main"&gt;159 RON&lt;/b&gt;
+                &lt;/div&gt;
+            &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div class="form-body"&gt;
+            &lt;div class="deadline-text"&gt;
+                &lt;p&gt;Pentru obținere indicați numele și numărul de telefon.&lt;/p&gt;
+                &lt;p&gt; A mai rămas timp:&lt;/p&gt;
+                &lt;div class="timer"&gt; &lt;span class="time-remains" id="wheel-min"&gt;10&lt;/span&gt; : &lt;span
+                        class="time-remains" id="wheel-sec"&gt;00&lt;/span&gt; &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;form action="api/send.php" autocomplete="off" method="post"&gt;
+                &lt;div class="form-inputs"&gt; &lt;input type="text" name="fullName" maxlength="30"
+                        placeholder="Introduceți Nume" required="required" value=""&gt;
+                    &lt;input type="tel" name="phoneNumber" placeholder="Introduceți Număr de telefon"
+                        required="required" value=""&gt;
+                &lt;/div&gt;
+                &lt;button class="submit-button" type="submit"&gt;Trimite&lt;/button&gt;
+
+                &lt;input type="hidden" name="country" value="PL" /&gt;
+                &lt;input type="hidden" name="language" value="pl" /&gt;
+                &lt;input type="hidden" name="offer_id" value="{offer_id}" /&gt;
+                &lt;input type="hidden" name="subid" value="{subid}" /&gt;
+                &lt;input type="hidden" name="offer_title" value="DiaFlex Forte" /&gt;
+                &lt;input type="hidden" name="niche" value="vision" /&gt;
+
+            &lt;/form&gt;
+            &lt;p class="footnote"&gt; *Dacă nu completați formularul până la ora
+                indicată, locul dumneavoastră va fi atribuit altei persoane,
+                deoarece medicamentul va fi în lipsă. &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="spin-result-wrapper default_spin-result-wrapper"&gt;
+        &lt;div class="pop-up-window"&gt;
+            &lt;div class="close-popup"&gt;&lt;/div&gt; &lt;span class="pop-up-heading"&gt;Felicitări!&lt;/span&gt;
+            &lt;p class="ruletka-p pop-up-text"&gt;Puteți comanda DiaFlex Forte cu o
+                reducere de 50%!&lt;/p&gt; &lt;a class="pop-up-button" data-toggle="scroll" href=""&gt;ОК&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            &lt;/center&gt;
+               
+                                        
+                &lt;!-- CSS --&gt;
+                       
+#form {
+    all          : initial;
+    display      : block;
+    box-sizing   : border-box;
+    font-family  : system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    font-size    : 14px;
+    line-height  : 1.4;
+    color        : #111;
+    max-width    : 650px;
+    margin       : 30px auto;
+    padding      : 20px;
+}
+
+#form *,
+#form *::before,
+#form *::after {
+    box-sizing: border-box;
+}
+
+#form .shariki__wrapper .shariki__container {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-pack: distribute !important;
+    justify-content: space-around !important;
+}
+
+#form .shariki__wrapper .box__shariki {
+    -webkit-perspective: 500px !important;
+    perspective: 500px !important;
+    position: relative !important;
+    width: 190px !important;
+    height: 400px !important;
+}
+
+#form .shariki__wrapper .shariki {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-image: url("../../../img/elements/forms/form-6/shar1.webp") !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% !important;
+    cursor: pointer !important;
+    animation: float 3s ease-in-out infinite;
+}
+
+#form .shariki__wrapper .hi {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#form .shariki__wrapper .shariki__sales {
+    position: absolute !important;
+    top: 30% !important;
+    left: 60% !important;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 50px !important;
+    line-height: 57px !important;
+    font-weight: 700 !important;
+    color: red !important;
+    border-radius: 30px !important;
+    padding: 30px 5px !important;
+    width: 85% !important;
+    min-width: 70px !important;
+}
+
+#form #shariki__2 {
+    background-image: url("../../../img/elements/forms/form-6/shar2.webp") !important;
+}
+
+#form #shariki__3 {
+    background-image: url("../../../img/elements/forms/form-6/shar3.webp") !important;
+}
+
+#form .shariki_img {
+    display: block;
+}
+
+#form .ctr {
+    text-align: center;
+}
+
+@keyframes balloonExplode {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(2.2) rotate(10deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0%   { transform: translate(0px, 0px) rotate(0deg); }
+  25%  { transform: translate(2px, -10px) rotate(1deg); }
+  50%  { transform: translate(0px, -15px) rotate(-1deg); }
+  75%  { transform: translate(-2px, -10px) rotate(1deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+#form .shariki.pop {
+  animation: balloonExplode 1.2s ease-in-out forwards;
+}
+
+#form .shariki.hidden {
+  display: none !important;
+}
+
+#form .wheel-order-section {
+    display      : block;
+    background   : #fff;
+    border       : 2px solid #27ae60;
+    border-radius: 10px;
+    padding      : 30px;
+    margin-top   : 20px;
+}
+
+#form.js-enabled .wheel-order-section {
+    display: none;
+}
+
+#form.js-enabled .wheel-order-section.show {
+    display  : block;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+#form .shariki__wrapper {
+    display: none;
+}
+
+#form.js-enabled .shariki__wrapper {
+    display: block;
+}
+
+#form .form-header {
+    text-align   : center;
+    margin-bottom: 30px;
+}
+
+#form .green-text {
+    color      : #27ae60;
+    font-size  : 18px;
+    font-weight: bold;
+    margin     : 10px 0;
+}
+
+#form .product-section {
+    text-align   : center;
+    margin-bottom: 30px;
+}
+
+#form .Figure.product {
+    position  : relative;
+    display   : inline-block;
+    margin    : 0 auto;
+    text-align: center;
+}
+
+#form .Figure.product img.prod_img,
+#form .prod_img {
+    max-width : 350px;
+    max-height: 380px;
+    object-fit: contain;
+    display   : block;
+    margin    : 0 auto;
+}
+
+#form .product {
+    position: relative;
+    display : inline-block;
+}
+
+#form .Figure.product .priceс,
+#form .product .priceс {
+    position         : absolute;
+    background       : linear-gradient(135deg, #ffd700 0%, #ffb300 100%);
+    padding          : 10px;
+    border-radius    : 15px;
+    transform        : rotate(-10deg);
+    box-shadow       : 0 5px 15px rgba(0, 0, 0, 0.3);
+    width            : 220px;
+    text-align       : center;
+    display          : flex;
+    flex-wrap        : wrap;
+    flex-direction   : column;
+    bottom           : 0px;
+    right             : 10px;
+    -webkit-transform: rotate(-10deg);
+    -moz-transform   : rotate(-10deg);
+    -ms-transform    : rotate(-10deg);
+    -o-transform     : rotate(-10deg);
+    height: auto;
+    line-height: 1.1;
+}
+
+#form .Figure.product .discountс,
+#form .product .discountс {
+    color      : #000;
+    font-weight: bold;
+    font-size  : 18px;
+    margin     : 0 0 5px 0;
+    display    : block;
+}
+
+#form .Figure.product .price_old,
+#form .product .price_old {
+    color          : #666;
+    text-decoration: line-through;
+    font-size      : 16px;
+    margin         : 5px 0;
+}
+
+#form .Figure.product .price_main,
+#form .product .price_main {
+    color      : #000;
+    font-size  : 28px;
+    font-weight: bold;
+    margin     : 5px 0 0 0;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    display: block;
+    line-height: 0.7;
+    border: none;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+#form .form-body {
+    text-align: center;
+}
+
+#form .deadline-text {
+    margin-bottom: 25px;
+    font-size     : 16px;
+    line-height   : 1.5;
+}
+
+#form .timer {
+    font-size  : 24px;
+    font-weight: bold;
+    color      : #e74c3c;
+    margin     : 10px 0;
+}
+
+#form .time-remains {
+    background   : #e74c3c;
+    color        : #fff;
+    padding      : 5px 10px;
+    border-radius: 5px;
+    margin       : 0 2px;
+}
+
+#form .form-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 450px;
+    max-width: 100%;
+}
+
+#form .form-inputs input {
+    all: initial;
+    display: block;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.2;
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+#form .form-inputs input:focus {
+    outline     : none;
+    border-color: #3498db;
+}
+
+#form .submit-button {
+    all: initial;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 1.2;
+    padding: 15px 40px;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-transform: uppercase;
+    text-align: center;
+    box-sizing: border-box;
+    width: 450px;
+    max-width: 100%;
+}
+
+#form .submit-button:hover {
+    background: #c0392b;
+}
+
+#form .footnote {
+    font-size  : 12px;
+    color      : #7f8c8d;
+    margin-top : 20px;
+    line-height: 1.4;
+}
+
+#form .spin-result-wrapper {
+    display: none;
+    padding: 0 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    left: 0;
+    height: 100%;
+    position: fixed;
+    background-color: transparent;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #00000085;
+}
+
+#form .spin-result-wrapper[style*="display: block"] {
+    display: flex !important;
+}
+
+#form .close-popup {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -40px;
+    right: -20px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-box-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 10px #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form .close-popup::before,
+#form .close-popup::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background-color: #333;
+    border-radius: 1px;
+}
+
+#form .close-popup::before {
+    transform: rotate(45deg);
+}
+
+#form .close-popup::after {
+    transform: rotate(-45deg);
+}
+
+#form .pop-up-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+#form .pop-up-text {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #333;
+    text-align: center !important;
+    padding: 0 !important;
+}
+
+#form .pop-up-button {
+    all: initial;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 1.2;
+    padding: 12px 30px;
+    background: #27ae60;
+    color: rgb(255, 255, 255) !important;
+    text-decoration: none !important;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#form .pop-up-button:hover {
+    background-color: #229954;
+    color: rgb(255, 255, 255) !important;
+    text-decoration: none !important;
+}
+
+#form .pop-up-window {
+    position: relative;
+    max-width: 400px;
+    width: 90%;
+    margin: 0px auto;
+    background: #fff none repeat scroll 0% 0%;
+    text-align: center;
+    padding: 40px;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    -webkit-animation: 0.7s ease 0s normal none 1 running pop-up-appear;
+    animation: 0.7s ease 0s normal none 1 running pop-up-appear;
+    top: auto;
+}
+
+#form .pop-up-window::before {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    top: -55px;
+    left: 0;
+    right: 0px;
+    margin: 0 auto;
+    background-color: rgb(113, 195, 65);
+    border-radius: 50%;
+    -webkit-animation: 0.5s ease 0.6s normal backwards 1 running pop-up-appear-before;
+    animation: 0.5s ease 0.6s normal backwards 1 running pop-up-appear-before;
+}
+
+#form .pop-up-window::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    top: -20px;
+    left: 0px;
+    right: 0;
+    margin: 0 auto;
+    border-width: medium medium 4px 4px;
+    border-style: none none solid solid;
+    border-color: currentcolor currentcolor rgb(255, 255, 255) rgb(255, 255, 255);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transition: opacity 1s ease 0s;
+    transition: opacity 1s ease 0s;
+    -webkit-animation: 0.5s ease 0.6s normal backwards 1 running pop-up-appear-after;
+    animation: 0.5s ease 0.6s normal backwards 1 running pop-up-appear-after;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity  : 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity  : 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    #form {
+        padding: 15px;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 420px) {
+    #form .shariki__wrapper .box__shariki,
+    #form .shariki__wrapper .shariki {
+        width: 85px !important;
+        height: 163px !important;
+    }
+}
+
+
+                 &lt;!-- JS --&gt;
+
+               
+&lt;script&gt;
+document.addEventListener('DOMContentLoaded', () =&gt; {
+  const discounts = [25, 35, 50];
+  const ballons = [1, 2, 3].map((id, idx) =&gt; ({
+    id,
+    node: document.getElementById(`shariki__${id}`),
+    salesNode: document.getElementById(`shariki__sales${id}`),
+    discount: discounts[idx]
+  }));
+  const resultWrapper = document.querySelector('.spin-result-wrapper');
+  const popUpHeading = document.querySelector('.pop-up-heading');
+  const popUpText = document.querySelector('.pop-up-text');
+  const priceOld = document.querySelector('.js_old_price');
+  const priceMain = document.querySelector('.js_new_price');
+  const priceDiscountLabel = document.querySelector('.discountс');
+  const formHeaderTexts = document.querySelectorAll('.wheel-order-section .form-header .green-text');
+  const wheelMin = document.getElementById('wheel-min');
+  const wheelSec = document.getElementById('wheel-sec');
+  const form = document.querySelector('.wheel-order-section form');
+  const wheelSection = document.querySelector('.wheel-order-section');
+  const sharikiWrapper = document.querySelector('.shariki__wrapper');
+
+  if (wheelSection) {
+    wheelSection.style.display = 'none';
+  }
+
+  const startSeconds = 10 * 60; 
+  let remainingSec = startSeconds;
+  let timerInterval;
+  let choiceMade = false;
+
+  function formatTime(sec) {
+    const m = Math.floor(sec / 60); const s = sec % 60;
+    return {m: String(m).padStart(2, '0'), s: String(s).padStart(2, '0')};
+  }
+
+  function updateTimer() {
+    if (remainingSec &lt;= 0) {
+      clearInterval(timerInterval);
+      wheelMin.textContent = '00';
+      wheelSec.textContent = '00';
+      form.querySelector('.submit-button').disabled = true;
+      form.querySelector('.footnote').textContent = 'Timpul a expirat. Reîncărcați pagina pentru o nouă încercare.';
+      return;
+    }
+    remainingSec -= 1;
+    const t = formatTime(remainingSec);
+    wheelMin.textContent = t.m;
+    wheelSec.textContent = t.s;
+  }
+
+  timerInterval = setInterval(updateTimer, 1000);
+
+  function applyDiscount(value) {
+    const basePrice = parseInt((priceOld.textContent.match(/\d+/) || [318])[0], 10);
+    const newPrice = Math.round(basePrice * (100 - value) / 100);
+    priceMain.textContent = `${newPrice} RON`;
+    priceDiscountLabel.textContent = `Reducerea dvs personală -- ${value}%!`;
+    if (formHeaderTexts.length &gt; 0) {
+      formHeaderTexts[0].textContent = `Pentru dvs. a fost rezervat DiaFlex Forte. Aveți 3 minute pentru a lăsa o cerere.`;
+      formHeaderTexts[1].textContent = `Costul preparatului pentru dvs. va fi -- ${newPrice} RON în loc de ${basePrice} RON`;
+    }
+    popUpHeading.textContent = 'Felicitări!';
+    popUpText.textContent = `Ai câștigat ${value}% reducere. Prețul tău final este ${newPrice} RON.`;
+    resultWrapper.style.display = 'flex';
+  }
+
+  function lockAllBallons() {
+    ballons.forEach(({node}) =&gt; {
+      if (node) {
+        node.classList.add('disabled');
+        node.style.pointerEvents = 'none';
+      }
+    });
+  }
+
+  ballons.forEach((balloon) =&gt; {
+    if (!balloon.node || !balloon.salesNode) return;
+    balloon.salesNode.textContent = `${balloon.discount}%`; 
+
+    balloon.node.addEventListener('click', () =&gt; {
+      if (choiceMade) return;
+      choiceMade = true;
+
+      const winDisc = 50;
+      const otherDiscounts = [25, 35];
+      const notSelected = ballons.filter((b) =&gt; b.id !== balloon.id);
+
+      notSelected.forEach((b, idx) =&gt; {
+        if (b.salesNode) {
+          b.salesNode.textContent = `${otherDiscounts[idx]}%`;
+        }
+        if (b.node) {
+          b.node.style.opacity = '0.5';
+        }
+      });
+
+      if (balloon.salesNode) {
+        balloon.salesNode.textContent = `${winDisc}%`;
+      }
+      if (balloon.node) {
+        balloon.node.classList.add('active');
+        balloon.node.style.border = '2px solid #ffd700';
+      }
+
+      lockAllBallons();
+      applyDiscount(winDisc);
+
+      window.setTimeout(() =&gt; {
+        if (resultWrapper) {
+          resultWrapper.classList.add('active');
+          resultWrapper.style.display = 'flex';
+        }
+      }, 250);
+    });
+  });
+
+  document.querySelectorAll('.close-popup, .pop-up-button').forEach(el =&gt; {
+    el.addEventListener('click', (evt) =&gt; {
+      if (resultWrapper) {
+        resultWrapper.style.display = 'none';
+        resultWrapper.classList.remove('active');
+      }
+      if (sharikiWrapper) {
+        sharikiWrapper.style.display = 'none';
+      }
+      if (wheelSection) {
+        wheelSection.style.display = 'block';
+      }
+      evt.preventDefault();
+    });
+  });
+
+  form.addEventListener('submit', (evt) =&gt; {
+    const name = form.querySelector('input[name="fullName"]').value.trim();
+    const phone = form.querySelector('input[name="phoneNumber"]').value.trim();
+    if (!name || !phone) {
+      evt.preventDefault();
+      alert('Vă rugăm completați corect numele și telefonul.');
+      return;
+    }
+    if (remainingSec &lt;= 0) {
+      evt.preventDefault();
+      alert('Timpul a expirat. Reîncărcați pagina.');
+      return;
+    }
+  });
+});
+&lt;/script&gt;
+
+
+                        </pre>
+
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="../../js/forms/form-6.js"></script>
+
+</body>
+
+</html>
